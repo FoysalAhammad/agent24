@@ -205,15 +205,15 @@
         </tbody>
       </table></div>
       <h2>Execution flow</h2>
-      <div class="code"><pre>AI response → parse tool_calls → PermissionManager.evaluate()
-  → DENY  → return "PERMISSION_DENIED"
-  → ASK   → show permission popup → wait for user
-  → ALLOW → Tool.execute(params, ctx) → return result</pre></div>
+      <div class="code"><pre>user action → check permission rules
+  → deny  → blocked immediately
+  → ask   → confirmation popup → wait for user
+  → allow → action runs</pre></div>
       <h2>Example calls</h2>
       <div class="code"><pre>bash    { "command": "ls -la" }
 read    { "path": "/path/to/file" }
 edit    { "path": "...", "oldString": "find", "newString": "replace" }
-grep    { "pattern": "regex", "path": "/dir", "include": "*.kt" }
+grep    { "pattern": "regex", "path": "/dir", "include": "*.md" }
 task    { "description": "...", "prompt": "...", "subagent_type": "explore" }</pre></div>
     </section>
 
@@ -377,16 +377,13 @@ restart behavior and rollback steps.</pre></div>
       <h1>MCP</h1>
       <p class="lead-sm">Model Context Protocol — connect external tool servers.</p>
       <h2>Registering a server</h2>
-      <div class="code"><pre>McpManager.getInstance().registerServer("my-server", instructions, tools);
+      <div class="code"><pre>{
+  "server": "my-server",
+  "instructions": "shown to the model in the system prompt",
+  "tools": [ { "name": "create_issue", "inputSchema": { ... } } ]
+}
 
-// instructions injected into system prompt
-String instructions = McpManager.getInstance().getServerInstructions();
-
-// tool definitions sent to the API
-JSONArray tools = McpManager.getInstance().getToolDefinitions();
-
-// execute an MCP tool
-String result = McpManager.getInstance().executeTool("mcp_server_tool", params);</pre></div>
+Calling any of these tools routes the result back to the model.</pre></div>
       <h2>Naming</h2>
       <p>MCP tools are prefixed with <code>mcp_{serverName}_{toolName}</code> so they never collide with built-ins.</p>
       <div class="code"><pre>mcp_github_create_issue
@@ -418,12 +415,10 @@ mcp_slack_send_message</pre></div>
         </tbody>
       </table></div>
       <h2>Event system</h2>
-      <div class="code"><pre>SessionEventManager.getInstance().addListener(listener);
-
-onSessionCreated(sessionId)
-onSessionLoaded(sessionId)
-onSessionDeleted(sessionId)
-onSessionRenamed(sessionId, newTitle)</pre></div>
+      <div class="code"><pre>session.created(sessionId)
+session.loaded(sessionId)
+session.deleted(sessionId)
+session.renamed(sessionId, newTitle)</pre></div>
       <p>Typical uses: telemetry, auto-backup before edits, audit logging, custom notifications.</p>
     </section>
 
@@ -431,9 +426,9 @@ onSessionRenamed(sessionId, newTitle)</pre></div>
       <h1>Sessions</h1>
       <p class="lead-sm">Every conversation is an isolated session with its own database.</p>
       <h2>Lifecycle</h2>
-      <div class="code"><pre>startNewSession()  → id "session_" + timestamp → metadata → SessionDB → event
+      <div class="code"><pre>startNewSession()  → id "session_" + timestamp → metadata → session database → event
 loadSession(id)    → set current → load messages → update timestamp → event
-deleteSession(id)  → drop .db + folders + metadata → clear memory → event</pre></div>
+deleteSession(id)  → drop database + folders + metadata → clear memory → event</pre></div>
       <h2>Storage</h2>
       <div class="table-wrap glass"><table>
         <thead><tr><th>Database</th><th>Path</th></tr></thead>
