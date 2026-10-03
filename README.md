@@ -25,7 +25,7 @@ permission system.
 
 ---
 
-![Agent 24 chat screen](https://raw.githubusercontent.com/FoysalAhammad/agent24/main/docs/screenshots/chat.png)
+
 
 ---
 
