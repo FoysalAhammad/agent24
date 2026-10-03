@@ -1,0 +1,102 @@
+{
+  "app_settings": {
+    "general": {
+      "language": "English",
+      "auto_accept_permissions": false,
+      "terminal_shell": "Auto (Default)",
+      "show_reasoning": true,
+      "expand_shell_tools": false,
+      "expand_edit_tools": false
+    },
+    "appearance": {
+      "color_scheme": "Light",
+      "theme": "Nord",
+      "ui_font": "System Sans",
+      "code_font": "System Mono",
+      "terminal_font": "JetBrainsMono"
+    },
+    "notifications": {
+      "notif_agent": true,
+      "notif_permissions": true,
+      "notif_errors": true
+    },
+    "sounds": {
+      "sound_enabled": true,
+      "sound_volume": "0.8",
+      "sound_agent": "Bip-bop 07",
+      "sound_permissions": "Bip-bop 07",
+      "sound_errors": "Nope 02"
+    },
+    "display": {
+      "pinch_zoom": false
+    },
+    "advanced": {
+      "file_tree": true,
+      "command_palette": true,
+      "server_status": true,
+      "show_agent": true
+    },
+    "permissions": {
+      "read": {
+        ".env": "deny",
+        ".env.*": "deny",
+        "**/*.pem": "deny",
+        "**/*.key": "deny",
+        "**": "allow"
+      },
+      "write": {
+        "**": "allow"
+      },
+      "edit": {
+        "**": "allow"
+      },
+      "bash": {
+        "rm -rf /": "deny",
+        "rm -rf /*": "deny",
+        "sudo *": "deny",
+        "su *": "deny",
+        "mkfs*": "deny",
+        "dd if=*": "deny",
+        "chmod 777 *": "deny",
+        "git *": "allow",
+        "ls*": "allow",
+        "cat *": "allow",
+        "echo *": "allow",
+        "**": "ask"
+      },
+      "shell": {
+        "**": "ask"
+      },
+      "webfetch": {
+        "**": "allow"
+      },
+      "websearch": {
+        "**": "allow"
+      },
+      "todowrite": {
+        "**": "allow"
+      },
+      "todoread": {
+        "**": "allow"
+      },
+      "grep": {
+        "**": "allow"
+      },
+      "glob": {
+        "**": "allow"
+      },
+      "list": {
+        "**": "allow"
+      },
+      "task": {
+        "**": "ask"
+      },
+      "question": {
+        "**": "allow"
+      },
+      "skill": {
+        "**": "allow"
+      }
+    }
+  }
+}
