@@ -77,7 +77,7 @@
       </div>
     </nav>
     <div class="sidebar-footer">
-      <div class="ver">v1.0 &middot; 13 providers &middot; 18 tools</div>
+      <div class="ver">v1.0 &middot; 13 providers &middot; 31 tools</div>
     </div>
   </aside>
   <div class="overlay" id="overlay"></div>
@@ -103,7 +103,7 @@
       </div>
       <div class="card-grid">
         <a class="card glass" href="#agents"><div class="card-ico"><svg class="i"><use href="#i-users"/></svg></div><h3>Agents</h3><p>Build, plan, explore, scout and system agents — each with its own permission profile.</p></a>
-        <a class="card glass" href="#tools"><div class="card-ico"><svg class="i"><use href="#i-tool"/></svg></div><h3>Tools</h3><p>18 tools: bash, read, write, edit, grep, git, web, task delegation and more.</p></a>
+        <a class="card glass" href="#tools"><div class="card-ico"><svg class="i"><use href="#i-tool"/></svg></div><h3>Tools</h3><p>31 tools: shell, files, search, web, git, documents, vision, device sensors and more.</p></a>
         <a class="card glass" href="#permissions"><div class="card-ico"><svg class="i"><use href="#i-shield"/></svg></div><h3>Permissions</h3><p>Allow / ask / deny gates on every tool, per agent — full control over what runs.</p></a>
         <a class="card glass" href="#providers"><div class="card-ico"><svg class="i"><use href="#i-zap"/></svg></div><h3>Providers</h3><p>13 pre-configured model providers with auto-fallback and retry logic.</p></a>
       </div>
@@ -180,7 +180,7 @@
 
     <section id="tools" class="page">
       <h1>Tools</h1>
-      <p class="lead-sm">18 built-in tools. Every tool takes a JSON parameter map.</p>
+      <p class="lead-sm">31 built-in tools. Every tool takes a JSON parameter map.</p>
       <div class="table-wrap glass"><table>
         <thead><tr><th>#</th><th>Tool</th><th>Class</th><th>Description</th></tr></thead>
         <tbody>
@@ -202,6 +202,19 @@
           <tr><td>16</td><td><code>todowrite</code></td><td>TodoWriteTool</td><td>Task list management</td></tr>
           <tr><td>17</td><td><code>todoread</code></td><td>TodoReadTool</td><td>Read todo state</td></tr>
           <tr><td>18</td><td><code>git</code></td><td>GitTool</td><td>Git status/diff/commit/…</td></tr>
+          <tr><td>19</td><td><code>archive</code></td><td>ArchiveTool</td><td>Zip / tar create &amp; extract</td></tr>
+          <tr><td>20</td><td><code>cv_maker</code></td><td>CvMakerTool</td><td>Generate a CV as PDF</td></tr>
+          <tr><td>21</td><td><code>docx_maker</code></td><td>DocxMakerTool</td><td>Generate Word documents</td></tr>
+          <tr><td>22</td><td><code>image_analyze</code></td><td>ImageAnalyzeTool</td><td>OCR &amp; structure analysis</td></tr>
+          <tr><td>23</td><td><code>image_describe</code></td><td>ImageDescribeTool</td><td>Describe images for the model</td></tr>
+          <tr><td>24</td><td><code>memory</code></td><td>MemoryTool</td><td>Long-term memory across sessions</td></tr>
+          <tr><td>25</td><td><code>pdf</code></td><td>PdfTool</td><td>Read / extract PDF text</td></tr>
+          <tr><td>26</td><td><code>pdf_edit</code></td><td>PdfEditTool</td><td>Edit existing PDFs</td></tr>
+          <tr><td>27</td><td><code>pdf_maker</code></td><td>PdfMakerTool</td><td>Generate PDF documents</td></tr>
+          <tr><td>28</td><td><code>schedule</code></td><td>ScheduleTool</td><td>Timed commands via alarms</td></tr>
+          <tr><td>29</td><td><code>screenshot</code></td><td>ScreenshotTool</td><td>Capture device screenshots</td></tr>
+          <tr><td>30</td><td><code>ui_dump</code></td><td>UiDumpTool</td><td>Dump the UI hierarchy</td></tr>
+          <tr><td>31</td><td><code>sensor</code></td><td>SensorTool</td><td>Read sensors &amp; control hardware (torch, vibrate, brightness, wifi…), root when needed</td></tr>
         </tbody>
       </table></div>
       <h2>Execution flow</h2>
