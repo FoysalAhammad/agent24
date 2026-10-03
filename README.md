@@ -159,6 +159,14 @@ Depending on the model you get tool calling, image input, reasoning display,
 streaming, retry with exponential backoff, and automatic fallback when a
 provider is unavailable.
 
+## Repository assets
+
+Skills, slash commands, default settings, fonts and the terminal banner live in
+[`assets/`](https://github.com/FoysalAhammad/agent24/tree/main/assets) — pull
+any file with a single `curl`, or just tell the agent *"install the X skill
+from the repo"* and it sets it up for you. Each file lands in
+`~/.config/agent24/` (skills and commands are usable on the next turn).
+
 ## Requirements
 
 - Android 8.0 (Oreo) or newer
