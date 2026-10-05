@@ -1,35 +1,37 @@
 <div align="center">
+  <img src="assets/banner.svg" alt="Agent 24 — autonomous AI coding &amp; technical assistant for Android" width="100%">
 
-# Agent 24
+  <h1>🤖 Agent 24</h1>
 
-**An autonomous AI coding & technical assistant for Android.**
+  <p><b>An autonomous AI coding &amp; technical assistant for Android.</b></p>
 
-Chat with leading AI models, let it plan and execute multi-step work, edit files,
-run shell commands, browse the web, drive the terminal, and control parts of the
-device itself — all from one app that keeps you in charge through an explicit
-permission system.
+  <p>
+    Chat with leading AI models, let it plan and execute multi-step work, edit files,<br>
+    run shell commands, browse the web, drive the terminal, and control parts of the<br>
+    device itself — all from one app that keeps you in charge through an explicit<br>
+    permission system.
+  </p>
 
-[![Platform](https://img.shields.io/badge/platform-Android-3DDC84?logo=android&logoColor=white)](https://foysalahammad.github.io/agent24)
-[![Tools](https://img.shields.io/badge/built--in%20tools-31-blueviolet)](https://foysalahammad.github.io/agent24/#tools)
-[![Docs](https://img.shields.io/badge/docs-foysalahammad.github.io%2Fagent24-22d3ee)](https://foysalahammad.github.io/agent24)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+  <p>
+    <a href="https://foysalahammad.github.io/agent24"><img src="https://img.shields.io/badge/platform-Android-3DDC84?logo=android&logoColor=white&style=for-the-badge" alt="Platform"></a>
+    <a href="https://foysalahammad.github.io/agent24/#tools"><img src="https://img.shields.io/badge/built--in%20tools-31-blueviolet?style=for-the-badge" alt="Tools"></a>
+    <a href="https://foysalahammad.github.io/agent24"><img src="https://img.shields.io/badge/docs-foysalahammad.github.io%2Fagent24-22d3ee?style=for-the-badge" alt="Docs"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="License"></a>
+  </p>
 
-[Docs](https://foysalahammad.github.io/agent24) ·
-[Features](#-what-you-get) ·
-[Agents](#-agents) ·
-[Tools](#-tools) ·
-[Providers](#-providers) ·
-[Getting started](#-getting-started)
-
+  <p>
+    <a href="https://foysalahammad.github.io/agent24">Docs</a> ·
+    <a href="#-what-you-get">Features</a> ·
+    <a href="#-agents">Agents</a> ·
+    <a href="#-tools">Tools</a> ·
+    <a href="#-providers">Providers</a> ·
+    <a href="#-getting-started">Getting started</a>
+  </p>
 </div>
 
 ---
 
-
-
----
-
-## Introduction
+## 🧭 Introduction
 
 Most Android "AI assistants" stop at chat replies. Agent 24 is built the other
 way around: you state the goal, it works out a plan, picks the right tools,
@@ -39,7 +41,9 @@ nothing surprising happens behind your back.
 
 It ships as a complete workspace:
 
-![Workspace drawer](https://raw.githubusercontent.com/FoysalAhammad/agent24/main/docs/screenshots/workspace.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FoysalAhammad/agent24/main/docs/screenshots/workspace.png" alt="Workspace drawer" width="880">
+</p>
 
 - **AI Chat** — the main agent loop with streaming replies, tool cards, and
   reasoning display
@@ -48,9 +52,11 @@ It ships as a complete workspace:
 - **Code Editor** — edit files without leaving the app
 - **File Explorer** — browse the device and project tree
 
-## What you get
+---
 
-| | |
+## ✨ What you get
+
+| Feature | What it does |
 |---|---|
 | 🧠 **Truly agentic** | Plans, executes, verifies, and iterates — not just replies. |
 | 🔧 **31 built-in tools** | Shell, files, search, patches, web, git, documents, vision, device control. |
@@ -61,7 +67,9 @@ It ships as a complete workspace:
 | 🌐 **Speaks your language** | Understands you in Bangla, Hindi, and 97 other languages — with an option to force the reply language. |
 | 🔌 **MCP-ready** | External MCP servers plug straight into the tool layer. |
 
-## Agents
+---
+
+## 🤖 Agents
 
 A layered agent system — pick the right one for the job.
 
@@ -75,28 +83,25 @@ A layered agent system — pick the right one for the job.
 | **Compaction** | System | Summarises context automatically when it grows too long. |
 | **Title / Summary** | System | Generates session titles and conversation summaries. |
 
-## Tools
+---
+
+## 🧰 Tools
 
 The model can call these during any conversation:
 
-**Core** — `bash` `shell` `read` `write` `edit` `diff` `apply_patch`
-
-**Search** — `grep` `glob` `list`
-
-**Web** — `webfetch` `websearch`
-
-**Documents & media** — `pdf` `pdf_edit` `pdf_maker` `docx_maker` `cv_maker`
-`archive` `image_analyze` `image_describe`
-
-**Device & system** — `screenshot` `ui_dump` `sensor`
-
-**Productivity** — `git` `memory` `schedule` `todowrite` `todoread` `task`
-`skill` `question`
+| Group | Tools |
+|---|---|
+| **Core** | `bash` `shell` `read` `write` `edit` `diff` `apply_patch` |
+| **Search** | `grep` `glob` `list` |
+| **Web** | `webfetch` `websearch` |
+| **Documents & media** | `pdf` `pdf_edit` `pdf_maker` `docx_maker` `cv_maker` `archive` `image_analyze` `image_describe` |
+| **Device & system** | `screenshot` `ui_dump` `sensor` |
+| **Productivity** | `git` `memory` `schedule` `todowrite` `todoread` `task` `skill` `question` |
 
 You can also drop in your own tools as plain markdown files in the config
 folder.
 
-### Device control
+### 📱 Device control
 
 The `sensor` tool talks to the hardware directly:
 
@@ -109,13 +114,21 @@ System-level changes ask for permission first and run through `su` when the
 device is rooted — on a rooted phone the agent can grant its own missing
 permission (like camera for the torch) with your approval.
 
-### Slash commands
+### ⌨️ Slash commands
 
-`/new` `/clear` `/sessions` `/model` `/connect` `/build` `/plan` `/init`
-`/diff` `/cwd` `/undo` `/redo` `/fork` `/review` `/compact` `/share` `/skills`
-`/agents` `/theme` `/export` `/import` `/help`
+<p>
+  <code>/new</code> <code>/clear</code> <code>/sessions</code> <code>/model</code> <code>/connect</code> <code>/build</code> <code>/plan</code> <code>/init</code>
+</p>
+<p>
+  <code>/diff</code> <code>/cwd</code> <code>/undo</code> <code>/redo</code> <code>/fork</code> <code>/review</code> <code>/compact</code> <code>/share</code> <code>/skills</code>
+</p>
+<p>
+  <code>/agents</code> <code>/theme</code> <code>/export</code> <code>/import</code> <code>/help</code>
+</p>
 
-## Permissions
+---
+
+## 🔐 Permissions
 
 Every tool sits behind a permission key — `read`, `edit`, `bash`, `task`,
 `webfetch`, `sensor`, and so on — with one of three values:
@@ -131,7 +144,9 @@ whole session, so you are not clicking the same thing twice.
 API credentials stay on your device, never show up in chat, and are never
 written into exported sessions.
 
-## Terminal
+---
+
+## 💻 Terminal
 
 The terminal is a full Termux environment:
 
@@ -141,13 +156,17 @@ The terminal is a full Termux environment:
 - sessions share the same home directory the agent works in, so what it writes
   is what you see
 
-## Reply language
+---
+
+## 🌐 Reply language
 
 The agent mirrors your language by default. If you prefer a fixed language, pick
 one of 99 languages in settings and every reply comes back in that language,
 no matter what language you typed in.
 
-## Providers
+---
+
+## 🔌 Providers
 
 Bring your own key — Agent 24 speaks the OpenAI-compatible protocol and comes
 pre-configured for a wide ecosystem:
@@ -159,7 +178,9 @@ Depending on the model you get tool calling, image input, reasoning display,
 streaming, retry with exponential backoff, and automatic fallback when a
 provider is unavailable.
 
-## Repository assets
+---
+
+## 📦 Repository assets
 
 Skills, slash commands, default settings, fonts and the terminal banner live in
 [`assets/`](https://github.com/FoysalAhammad/agent24/tree/main/assets) — pull
@@ -167,14 +188,18 @@ any file with a single `curl`, or just tell the agent *"install the X skill
 from the repo"* and it sets it up for you. Each file lands in
 `~/.config/agent24/` (skills and commands are usable on the next turn).
 
-## Requirements
+---
+
+## ✅ Requirements
 
 - Android 8.0 (Oreo) or newer
 - About 100 MB of free storage
 - An internet connection for the AI providers
 - An API key from any supported provider (free tiers work fine)
 
-## Getting started
+---
+
+## 🚀 Getting started
 
 1. Install Agent 24 on your device.
 2. Connect a provider with `/connect` — pick one, paste your API key.
@@ -190,7 +215,9 @@ Full documentation lives at
 [foysalahammad.github.io/agent24](https://foysalahammad.github.io/agent24) —
 agents, tools, permissions, providers, skills, MCP, sessions, and troubleshooting.
 
-## Roadmap
+---
+
+## 🗺️ Roadmap
 
 - [x] MCP (Model Context Protocol) support
 - [ ] Team sessions & shared workspaces
@@ -204,13 +231,13 @@ Bug reports and feature ideas are welcome in
 ---
 
 <div align="center">
+  <br>
 
-**Developer:** [Foysal Ahammad](https://github.com/FoysalAhammad)
+  **Developer:** [Foysal Ahammad](https://github.com/FoysalAhammad)
 
-Released under the [MIT License](LICENSE).
+  Released under the [MIT License](LICENSE).
 
-**⭐ Star the repository if Agent 24 is useful to you.**
+  <p><b>⭐ Star the repository if Agent 24 is useful to you.</b></p>
 
-Made for the Android community
-
+  <sub>Made for the Android community</sub>
 </div>
