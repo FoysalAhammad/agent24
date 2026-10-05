@@ -1,6 +1,4 @@
 <div align="center">
-  <img src="assets/banner.svg" alt="Agent 24 — autonomous AI coding &amp; technical assistant for Android" width="100%">
-
   <h1>🤖 Agent 24</h1>
 
   <p><b>An autonomous AI coding &amp; technical assistant for Android.</b></p>
@@ -11,6 +9,8 @@
     device itself — all from one app that keeps you in charge through an explicit<br>
     permission system.
   </p>
+
+  <img src="assets/banner.svg" alt="Agent 24 — autonomous AI coding &amp; technical assistant for Android" width="100%">
 
   <p>
     <a href="https://foysalahammad.github.io/agent24"><img src="https://img.shields.io/badge/platform-Android-3DDC84?logo=android&logoColor=white&style=for-the-badge" alt="Platform"></a>
@@ -41,9 +41,19 @@ nothing surprising happens behind your back.
 
 It ships as a complete workspace:
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/FoysalAhammad/agent24/main/docs/screenshots/workspace.png" alt="Workspace drawer" width="880">
-</p>
+<table>
+  <tr>
+    <td width="34%" align="center" valign="top">
+      <img src="docs/screenshots/ui-chat.png" alt="Agent 24 chat — Build and Plan agents, model picker, slash-command input" width="100%">
+    </td>
+    <td width="33%" align="center" valign="top">
+      <img src="docs/screenshots/ui-models.png" alt="Manage Models — providers, models and local backends" width="100%">
+    </td>
+    <td width="33%" align="center" valign="top">
+      <img src="docs/screenshots/ui-settings.png" alt="Settings — language, permissions, terminal shell, reasoning and theme" width="100%">
+    </td>
+  </tr>
+</table>
 
 - **AI Chat** — the main agent loop with streaming replies, tool cards, and
   reasoning display
