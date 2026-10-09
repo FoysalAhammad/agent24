@@ -17,10 +17,12 @@
     <a href="https://foysalahammad.github.io/agent24/#tools"><img src="https://img.shields.io/badge/built--in%20tools-31-blueviolet?style=for-the-badge" alt="Tools"></a>
     <a href="https://foysalahammad.github.io/agent24"><img src="https://img.shields.io/badge/docs-foysalahammad.github.io%2Fagent24-22d3ee?style=for-the-badge" alt="Docs"></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="License"></a>
+    <a href="https://foysalahammad.github.io/agent24/#privacy"><img src="https://img.shields.io/badge/privacy-policy-respected-orange?style=for-the-badge" alt="Privacy Policy"></a>
   </p>
 
   <p>
     <a href="https://foysalahammad.github.io/agent24">Docs</a> ·
+    <a href="https://foysalahammad.github.io/agent24/#privacy">Privacy Policy</a> ·
     <a href="#-what-you-get">Features</a> ·
     <a href="#-agents">Agents</a> ·
     <a href="#-tools">Tools</a> ·
@@ -61,6 +63,8 @@ It ships as a complete workspace:
   already mounted, and a welcome banner that links to this repository
 - **Code Editor** — edit files without leaving the app
 - **File Explorer** — browse the device and project tree
+- **Live Preview** — the `serve` tool renders localhost sites in-app with a
+  desktop / mobile viewport toggle and a one-tap "Open in Browser"
 
 ---
 
@@ -76,6 +80,8 @@ It ships as a complete workspace:
 | 📴 **Everything stays local** | Sessions, history, memory and settings live on your device. |
 | 🌐 **Speaks your language** | Understands you in Bangla, Hindi, and 97 other languages — with an option to force the reply language. |
 | 🔌 **MCP-ready** | External MCP servers plug straight into the tool layer. |
+| 🖥 **Live preview** | Localhost sites render in-app with desktop/mobile toggle and browser hand-off. |
+| 🔄 **Smart updates** | The app checks GitHub Releases and offers a verified, resumable update. |
 
 ---
 
@@ -103,7 +109,7 @@ The model can call these during any conversation:
 |---|---|
 | **Core** | `bash` `shell` `read` `write` `edit` `diff` `apply_patch` |
 | **Search** | `grep` `glob` `list` |
-| **Web** | `webfetch` `websearch` |
+| **Web** | `webfetch` `websearch` `serve` |
 | **Documents & media** | `pdf` `pdf_edit` `pdf_maker` `docx_maker` `cv_maker` `archive` `image_analyze` `image_describe` |
 | **Device & system** | `screenshot` `ui_dump` `sensor` |
 | **Productivity** | `git` `memory` `schedule` `todowrite` `todoread` `task` `skill` `question` |
@@ -156,6 +162,51 @@ written into exported sessions.
 
 ---
 
+## 🔒 Security & Privacy
+
+Agent 24 is designed so that **your data never leaves your device except to the
+AI provider you explicitly configured**. There is no Agent 24 server.
+
+### What is stored locally (on-device only)
+
+| Data | Where | Purpose |
+|---|---|---|
+| Chat history | App-private SQLite database | Conversation context |
+| API keys | Android Keystore + encrypted prefs | Provider authentication |
+| Sessions, settings, todos | App-private storage | App functionality |
+| Crash logs (optional) | On-device, opt-in | Bug fixing only |
+
+### What is sent over the network
+
+| Data | Destination | Purpose |
+|---|---|---|
+| Your prompts & conversation context | **Only** the AI provider you selected (OpenAI, Anthropic, Google, …) | Generating model replies |
+| Nothing else | — | No telemetry, no analytics by default, no data sale |
+
+### Security measures
+
+- **AES-256-GCM encryption** for every secret, backed by the Android Keystore
+  (hardware-backed where available)
+- **TLS 1.3 with certificate pinning** on all network calls
+- **APK integrity**: SHA-512 dex fingerprint, signing-certificate pin, and a
+  native self-test that detects repackaging at launch
+- **Repackaging detection**: modified or re-signed builds are refused
+- **Root & hook detection**: warns the user, never uploads anything
+- **R8 obfuscation** with a custom dictionary in release builds
+
+### Your rights
+
+- **See your data** — Settings → Export Data
+- **Delete your data** — Settings → Delete All Data, or uninstall
+- **Stop analytics** — Settings → Privacy → Analytics (off by default)
+- **Remove API keys** — Settings → Models → Remove
+
+**Full Privacy Policy:** [foysalahammad.github.io/agent24/#privacy](https://foysalahammad.github.io/agent24/#privacy)
+
+**Content rating:** Teen (13+) · Not directed at children under 13.
+
+---
+
 ## 💻 Terminal
 
 The terminal is a full Termux environment:
@@ -200,6 +251,18 @@ from the repo"* and it sets it up for you. Each file lands in
 
 ---
 
+## ❓ FAQ & Support
+
+Common questions (pricing, privacy, root, install, models, troubleshooting) are
+answered in the [FAQ & Q&A](FAQ.md) and tracked as
+[answered issues](https://github.com/FoysalAhammad/agent24/issues?q=label%3Aquestion).
+
+- **Bug reports** → [Open an issue](https://github.com/Foysalahammad/agent24/issues/new?template=bug_report.md)
+- **Security issues** → [GitHub Security Advisories](https://github.com/FoysalAhammad/agent24/security/advisories) (do not open a public issue)
+- **Contributing** → [CONTRIBUTING.md](https://github.com/FoysalAhammad/agent24/blob/main/CONTRIBUTING.md)
+
+---
+
 ## ✅ Requirements
 
 - Android 8.0 (Oreo) or newer
@@ -230,6 +293,10 @@ agents, tools, permissions, providers, skills, MCP, sessions, and troubleshootin
 ## 🗺️ Roadmap
 
 - [x] MCP (Model Context Protocol) support
+- [x] Live localhost preview with desktop/mobile toggle
+- [x] Smart tool-parameter repair (alias, type coercion, positional fallback)
+- [x] Report card (Done / Pending / Changed files collapsed into one card)
+- [x] File previews (PDF, DOCX, XLSX, CSV rendered inline)
 - [ ] Team sessions & shared workspaces
 - [ ] Plugin / skill marketplace
 - [ ] Local (on-device) model backend
@@ -249,5 +316,5 @@ Bug reports and feature ideas are welcome in
 
   <p><b>⭐ Star the repository if Agent 24 is useful to you.</b></p>
 
-  <sub>Made for the Android community</sub>
+  <sub>Made for the Android community · Privacy-respecting by design</sub>
 </div>
