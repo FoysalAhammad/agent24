@@ -4,13 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Agent 24 — AI Coding Assistant for Android</title>
-<meta name="description" content="Agent 24 is an open-source AI coding and technical assistant for Android. Chat, plan, run tools, edit files and control your device — local-first, no accounts.">
+<meta name="description" content="Agent 24 is an open-source AI assistant for Android. It writes and edits code, runs shell commands, works with files and documents, and finishes multi-step tasks — local-first, no accounts.">
 <meta name="theme-color" content="#F6F7F9">
 <meta property="og:title" content="Agent 24 — AI Coding Assistant for Android">
-<meta property="og:description" content="Open-source, local-first AI agent for Android: 31 tools, 12 model providers, agents, permissions and a full terminal.">
+<meta property="og:description" content="Open-source, local-first AI assistant for Android: 31 tools, 12 model providers, agents, permissions and a full terminal.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://foysalahammad.github.io/agent24/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111418'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='800' fill='white' text-anchor='middle'%3EA24%3C/text%3E%3C/svg%3E">
+<meta property="og:image" content="https://foysalahammad.github.io/agent24/logo.png">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
 <link rel="canonical" href="https://foysalahammad.github.io/agent24/">
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -45,7 +47,7 @@
 <header class="topbar">
   <div class="topbar-inner">
     <button class="menu-btn" id="menuBtn" aria-label="Menu"><svg class="i"><use href="#i-menu"/></svg></button>
-    <a href="#home" class="brand"><span class="brand-mark">A24</span> Agent 24 <span class="brand-sub">Docs</span></a>
+    <a href="#home" class="brand"><img class="brand-logo" src="logo.png" alt="" width="36" height="36"> Agent 24 <span class="brand-sub">Docs</span></a>
     <nav class="topnav">
       <a href="#getting-started">Get Started</a>
       <a href="#agents">Agents</a>
@@ -101,7 +103,7 @@
       <div class="hero">
         <div class="hero-badge">Open source · Android · Local-first</div>
         <h1>Agent <span class="grad">24</span></h1>
-        <p class="lead">An open-source AI coding and technical assistant for Android. It reads, writes and edits files, runs shell commands, browses the web, generates documents and completes multi-step tasks — entirely from your phone.</p>
+        <p class="lead">Agent 24 is an open-source AI assistant for Android. It writes and edits code, runs shell commands, works with files and documents, searches the web and finishes multi-step tasks — end to end, from your phone.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://github.com/FoysalAhammad/agent24/releases" target="_blank" rel="noopener"><svg class="i i-sm"><use href="#i-download"/></svg> Download APK</a>
           <a class="btn btn-ghost" href="#getting-started">Get Started <svg class="i i-sm"><use href="#i-arrow"/></svg></a>
@@ -118,7 +120,7 @@
         <a class="card" href="#agents">
           <div class="card-ico"><svg class="i"><use href="#i-users"/></svg></div>
           <h3>Agents</h3>
-          <p>Build, plan, explore, scout and general agents — each with its own permission profile, plus automatic system agents.</p>
+          <p>Build, plan, explore, scout and general agents, each with its own permission profile — plus system agents that run automatically.</p>
         </a>
         <a class="card" href="#tools">
           <div class="card-ico"><svg class="i"><use href="#i-tool"/></svg></div>
@@ -150,9 +152,9 @@
       <h2>Quick start</h2>
       <ol class="steps">
         <li>Install the APK from <a href="https://github.com/FoysalAhammad/agent24/releases" target="_blank" rel="noopener">GitHub Releases</a> and open Agent 24.</li>
-        <li>Connect a provider — <code>/connect</code> (free tier available, zero setup).</li>
+        <li>Connect a provider with <code>/connect</code> — free models work with zero setup.</li>
         <li>Pick a model — <code>/model</code>.</li>
-        <li>Type what you want built. That's it.</li>
+        <li>Describe the task in plain language. The agent takes it from there.</li>
       </ol>
     </section>
 
@@ -619,7 +621,7 @@ deleteSession(id)  → drop DB + folders + metadata → clear memory → event</
       <h1>Privacy Policy</h1>
       <p class="lead-sm">Last updated 10 October 2026 · Version 1.0 · Contact: <a href="https://github.com/FoysalAhammad/agent24/issues" target="_blank" rel="noopener">GitHub Issues</a></p>
 
-      <p><b>Agent 24</b> is an open-source Android application. This page explains what data the app handles, why, and what control you have. <b>We do not sell data. Conversations are not processed on servers operated by the project.</b></p>
+      <p><b>Agent 24</b> is an open-source Android application. This page explains what data the app handles, why, and what control you have. <b>We do not sell data.</b> Your conversations never pass through servers run by the project.</p>
 
       <h2>Data the app handles</h2>
       <div class="table-wrap"><table>
