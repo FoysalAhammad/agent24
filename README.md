@@ -181,7 +181,29 @@ AI provider you explicitly configured**. There is no Agent 24 server.
 | Data | Destination | Purpose |
 |---|---|---|
 | Your prompts & conversation context | **Only** the AI provider you selected (OpenAI, Anthropic, Google, …) | Generating model replies |
+| Sensor readings, screenshots, UI dumps | The same AI provider — **only** as tool output for a task you requested in that session | Completing that task; never linked to device identifiers |
 | Nothing else | — | No telemetry, no analytics by default, no data sale |
+
+### Persistent device identifiers
+
+The app does **not** collect or use IMEI, IMSI, SIM serial numbers, the Android
+Advertising ID (AAID) or the App Set ID, and does **not** link any persistent
+device identifier to personal or sensitive user data or to resettable device
+identifiers.
+
+### Third-party code & advertising
+
+Bundled components (PDF processing, on-device OCR, the terminal runtime) run
+entirely on your device; no embedded SDK sells personal or sensitive user data.
+When ads are shown they come from the project's own signed remote
+configuration — no third-party advertising SDK, no advertising identifier, no
+cross-app ad profiles.
+
+### Consent
+
+This policy is shown on first launch and must be accepted ("I Agree &
+Continue") before anything is collected. Runtime permissions (accessibility,
+camera, …) are requested only when a feature you choose needs them.
 
 ### Security measures
 
@@ -193,6 +215,14 @@ AI provider you explicitly configured**. There is no Agent 24 server.
 - **Repackaging detection**: modified or re-signed builds are refused
 - **Root & hook detection**: warns the user, never uploads anything
 - **R8 obfuscation** with a custom dictionary in release builds
+- **Remote configuration**: Ed25519-signed payloads, verified before use
+
+### Retention & deletion
+
+Your data stays on your device for as long as you keep it. The project retains
+nothing on its own servers, and no account exists — uninstalling the app
+removes all app-private data. Export a copy first with Settings → Export Data
+if you want one.
 
 ### Your rights
 
@@ -201,7 +231,18 @@ AI provider you explicitly configured**. There is no Agent 24 server.
 - **Stop analytics** — Settings → Privacy → Analytics (off by default)
 - **Remove API keys** — Settings → Models → Remove
 
-**Full Privacy Policy:** [foysalahammad.github.io/agent24/#privacy](https://foysalahammad.github.io/agent24/#privacy)
+Users in the EU, UK or Switzerland may also exercise the rights granted by
+applicable data-protection law (access, rectification, erasure, restriction,
+objection) through the contact channels in the full policy. The app processes
+personal data only for purposes reasonably expected by you and does not sell it.
+
+**Full Privacy Policy (v2.0, effective 10 October 2026):**
+[foysalahammad.github.io/agent24/#privacy](https://foysalahammad.github.io/agent24/#privacy)
+— the same policy ships inside the app (first-launch consent screen and
+Drawer → Privacy Policy). Privacy enquiries:
+[GitHub Issues](https://github.com/FoysalAhammad/agent24/issues) ·
+Security reports:
+[GitHub Security Advisories](https://github.com/FoysalAhammad/agent24/security/advisories).
 
 **Content rating:** Teen (13+) · Not directed at children under 13.
 
