@@ -619,35 +619,42 @@ deleteSession(id)  → drop DB + folders + metadata → clear memory → event</
     <!-- ════════════ PRIVACY ════════════ -->
     <section id="privacy" class="page">
       <h1>Privacy Policy</h1>
-      <p class="lead-sm">Last updated 10 October 2026 · Version 1.0 · Contact: <a href="https://github.com/FoysalAhammad/agent24/issues" target="_blank" rel="noopener">GitHub Issues</a></p>
+      <p class="lead-sm">Effective 10 October 2026 · Version 2.0 · Privacy contact: <a href="https://github.com/FoysalAhammad/agent24/issues" target="_blank" rel="noopener">GitHub Issues</a></p>
 
-      <p><b>Agent 24</b> is an open-source Android application. This page explains what data the app handles, why, and what control you have. <b>We do not sell data.</b> Your conversations never pass through servers run by the project.</p>
+      <p>This is the privacy policy of <b>Agent 24</b> ("the app"), an open-source Android application. It explains what user data the app accesses, collects, uses, handles and shares; with whom; and what control you have. The same policy is available inside the app (first-launch consent screen and Drawer → Privacy Policy). <b>We do not sell personal or sensitive user data.</b> Your conversations never pass through servers run by the project.</p>
+
+      <h2>Consent</h2>
+      <p>On first launch the app shows this policy and asks for your consent before anything is collected. You must tap <b>I Agree &amp; Continue</b> to proceed. Android runtime permissions (accessibility, camera and similar) are requested only when a feature you choose actually needs them.</p>
 
       <h2>Data the app handles</h2>
       <div class="table-wrap"><table>
         <thead><tr><th>Data</th><th>Where it lives</th><th>Why</th><th>Shared with</th></tr></thead>
         <tbody>
-          <tr><td>Chat history</td><td>On-device SQLite (app-private storage)</td><td>Conversation context, export</td><td>Never, unless you export</td></tr>
-          <tr><td>AI API keys</td><td>Android Keystore + encrypted preferences</td><td>Authenticate with your provider</td><td>Only the provider you configured</td></tr>
-          <tr><td>Your prompts</td><td>Sent to the provider you chose</td><td>To obtain a model reply</td><td><b>Only</b> that provider</td></tr>
-          <tr><td>Device information</td><td>On-device</td><td>Compatibility and crash diagnosis</td><td>Never</td></tr>
-          <tr><td>Crash logs</td><td>On-device, opt-in</td><td>Bug fixing</td><td>Optional, opt-in only</td></tr>
-          <tr><td>Advertising</td><td>Remote configuration, signed and verifiable</td><td>Optional in-app ads</td><td>Ad delivery as described in-app</td></tr>
+          <tr><td>Chat history</td><td>On-device SQLite, app-private storage</td><td>Conversation context and export</td><td>Never, unless you export it yourself</td></tr>
+          <tr><td>AI API keys</td><td>Android Keystore + AES-256-GCM</td><td>Authenticate with your chosen provider</td><td>Only that provider</td></tr>
+          <tr><td>Your prompts and conversation context</td><td>Sent to the provider you selected</td><td>To obtain a model reply</td><td><b>Only</b> that provider — its privacy policy governs the transfer</td></tr>
+          <tr><td>Files you open or create</td><td>The folders you choose on your device</td><td>Task execution</td><td>Never, unless you export or share them</td></tr>
+          <tr><td>Screenshots, UI dumps, sensor readings (including location where the device allows it)</td><td>Collected only while a session runs and only when you request a task that needs them</td><td>To complete that task; results may be sent to your chosen AI provider as tool output</td><td>That provider only; never linked to device identifiers</td></tr>
+          <tr><td>Device and compatibility information</td><td>On-device</td><td>Crash diagnosis</td><td>Never uploaded unless you opt in</td></tr>
+          <tr><td>Crash logs / usage analytics</td><td>On-device, opt-in, off by default</td><td>Bug fixing</td><td>Only if you choose to send them</td></tr>
         </tbody>
       </table></div>
       <p><b>No account. No registration. No advertising identifier. No data broker.</b></p>
 
-      <h2>What is sent to AI providers</h2>
-      <p>When you send a message, the app forwards the message text, conversation context and any tool results the model requested to the <b>provider you selected</b> in Settings → Models, over TLS. Each provider's own privacy policy governs that transfer. The project does not relay conversations through its own servers. You can remove your API key at any time (Settings → Models → Remove), which stops all further calls.</p>
+      <h2>Persistent device identifiers</h2>
+      <p>The app does <b>not</b> collect or use IMEI, IMSI, SIM serial numbers, the Android Advertising ID (AAID) or the App Set ID, and does <b>not</b> link any persistent device identifier to personal or sensitive user data or to resettable device identifiers.</p>
 
-      <h2>Advertising</h2>
-      <p>The app may display advertisements delivered through a remotely signed configuration. The project does not collect or use an advertising identifier, does not build cross-app advertising profiles, and does not share personal data with third-party advertising networks beyond what is required to render an ad. Ads can be reviewed at any time in the app's privacy settings.</p>
+      <h2>What is sent to AI providers</h2>
+      <p>When you send a message, the app forwards the message text, conversation context and any tool results the model requested to the <b>provider you selected</b> in Settings → Models, over TLS. Each provider's own privacy policy governs that transfer. The project does not relay conversations through its own servers. Removing your API key (Settings → Models → Remove) stops all further calls.</p>
+
+      <h2>Third-party code and advertising</h2>
+      <p>Components bundled with the app (PDF processing, on-device OCR, the terminal runtime) operate entirely on your device. No embedded SDK sells personal or sensitive user data from this app. When advertisements are shown, they are delivered through the project's own signed remote configuration — no third-party advertising SDK is embedded, no advertising identifier is collected, and no cross-app advertising profile is built.</p>
 
       <h2>Security measures</h2>
       <div class="table-wrap"><table>
         <thead><tr><th>Layer</th><th>Protection</th></tr></thead>
         <tbody>
-          <tr><td>API keys at rest</td><td>Android Keystore + AES-256-GCM</td></tr>
+          <tr><td>API keys at rest</td><td>Android Keystore + AES-256-GCM (hardware-backed where available)</td></tr>
           <tr><td>Chat database</td><td>App-private storage, readable only by this app</td></tr>
           <tr><td>Network</td><td>HTTPS / TLS with certificate pinning</td></tr>
           <tr><td>APK integrity</td><td>Dex fingerprint + certificate pinning + native self-test</td></tr>
@@ -655,6 +662,14 @@ deleteSession(id)  → drop DB + folders + metadata → clear memory → event</
           <tr><td>Root / hook detection</td><td>Warns only — never uploads anything</td></tr>
         </tbody>
       </table></div>
+
+      <h2>Retention and deletion</h2>
+      <p>Your data stays on your device for as long as you keep it. The project retains nothing on its own servers, and no account exists — so there is no server-side copy to delete. You can delete everything at any time:</p>
+      <ul>
+        <li><b>In-app:</b> Settings → Delete All Data</li>
+        <li><b>Full removal:</b> uninstall the app — app-private data is removed with it</li>
+        <li><b>Keep a copy:</b> Settings → Export Data (Markdown / JSON) before deleting</li>
+      </ul>
 
       <h2>Your rights</h2>
       <div class="table-wrap"><table>
@@ -667,20 +682,22 @@ deleteSession(id)  → drop DB + folders + metadata → clear memory → event</
           <tr><td>Withdraw consent</td><td>Uninstall — no server-side copy exists</td></tr>
         </tbody>
       </table></div>
+      <p>If you are in the European Union, the United Kingdom or Switzerland, you may also exercise the rights granted by applicable data-protection law (including access, rectification, erasure, restriction and objection) through the contact channels below. The app processes personal data only for purposes reasonably expected by you — completing the tasks you request — and does not sell it.</p>
 
       <h2>Children</h2>
       <p>Agent 24 is not directed at children under 13, and the project does not knowingly collect data from them. Recommended content rating: <b>13+</b>.</p>
 
       <h2>Changes to this policy</h2>
-      <p>Material changes will be posted on this page with an updated date. Continued use after a change means acceptance.</p>
+      <p>Material changes are posted on this page with an updated date and a new version number. The in-app copy asks for your consent again after a version change. Continued use after a change means acceptance.</p>
 
       <h2>Contact</h2>
-      <p>Questions, requests and security reports are handled through the project's GitHub:</p>
+      <p>Privacy enquiries, requests and security reports are handled through the project's GitHub:</p>
       <ul>
-        <li><b>General questions:</b> <a href="https://github.com/FoysalAhammad/agent24/issues" target="_blank" rel="noopener">GitHub Issues</a></li>
+        <li><b>Privacy enquiries:</b> <a href="https://github.com/FoysalAhammad/agent24/issues" target="_blank" rel="noopener">GitHub Issues</a></li>
         <li><b>Security reports:</b> <a href="https://github.com/FoysalAhammad/agent24/security/advisories" target="_blank" rel="noopener">GitHub Security Advisories</a> (private reporting)</li>
+        <li><b>Repository:</b> <a href="https://github.com/FoysalAhammad/agent24" target="_blank" rel="noopener">github.com/FoysalAhammad/agent24</a></li>
       </ul>
-      <p class="muted"><i>Effective: 10 October 2026 · License: MIT</i></p>
+      <p class="muted"><i>Effective: 10 October 2026 · Version 2.0 · License: MIT · This policy applies to the Agent 24 app and the documentation site you are reading.</i></p>
     </section>
   </main>
 </div>
