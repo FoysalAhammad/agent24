@@ -224,3 +224,14 @@ tbody tr:first-child td{border-top:none}
   .stats{grid-template-columns:repeat(2,1fr)}
   .topnav a:not(.github-link){display:none}
 }
+
+/* Support section */
+.support-hero{display:grid;grid-template-columns:1.6fr 1fr;gap:28px;align-items:center;padding:34px;margin:26px 0 34px;border-radius:22px}
+.support-hero-art{display:flex;align-items:center;justify-content:center;min-height:150px}
+.support-hero .tier{display:inline-flex;align-items:center;gap:8px;font-size:22px;font-weight:800;padding:16px 26px;border-radius:999px;background:linear-gradient(135deg,var(--accent),#b45cff);color:#fff;box-shadow:0 14px 40px -14px var(--accent)}
+.support-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:18px 0 34px}
+.support-card{display:block;padding:22px;border-radius:18px;text-decoration:none;transition:transform .25s,border-color .25s}
+.support-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.support-card .i{width:26px;height:26px;color:var(--accent)}
+.support-card h3{margin:12px 0 6px;font-size:17px}
+@media(max-width:900px){.support-hero{grid-template-columns:1fr;padding:26px}}
