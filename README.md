@@ -15,6 +15,7 @@
   <p>
     <a href="https://foysalahammad.github.io/agent24"><img src="https://img.shields.io/badge/platform-Android-3DDC84?logo=android&logoColor=white&style=for-the-badge" alt="Platform"></a>
     <a href="https://foysalahammad.github.io/agent24/#tools"><img src="https://img.shields.io/badge/built--in%20tools-31-blueviolet?style=for-the-badge" alt="Tools"></a>
+    <a href="https://github.com/FoysalAhammad/agent24/releases"><img src="https://img.shields.io/badge/version-v0.1-f97316?style=for-the-badge" alt="Version"></a>
     <a href="https://foysalahammad.github.io/agent24"><img src="https://img.shields.io/badge/docs-foysalahammad.github.io%2Fagent24-22d3ee?style=for-the-badge" alt="Docs"></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" alt="License"></a>
     <a href="https://foysalahammad.github.io/agent24/#privacy"><img src="https://img.shields.io/badge/privacy-policy-respected-orange?style=for-the-badge" alt="Privacy Policy"></a>
@@ -271,10 +272,14 @@ no matter what language you typed in.
 ## 🔌 Providers
 
 Bring your own key — Agent 24 speaks the OpenAI-compatible protocol and comes
-pre-configured for a wide ecosystem:
+pre-configured with 12 providers:
 
-OpenAI · Anthropic · Google · Groq · DeepSeek · Mistral · xAI · Together ·
-OpenRouter · HuggingFace · GitHub Models · Pollinations · and more.
+**OpenCode Zen** (free-tier, zero setup) · **OpenAI** (GPT family) ·
+**Anthropic** (Claude family) · **Google Gemini** (Gemini family) ·
+**DeepSeek** (V4 models) · **Groq** (fast inference) · **xAI** (Grok family) ·
+**Meta** (Llama via OpenAI-compatible endpoint) · **Alibaba Qwen** ·
+**Ollama** (local models on your own network, fully offline) ·
+**LM Studio** (local desktop models) · **GitHub Copilot** (your subscription).
 
 Depending on the model you get tool calling, image input, reasoning display,
 streaming, retry with exponential backoff, and automatic fallback when a
