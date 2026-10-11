@@ -7,10 +7,10 @@
 ## 💰 Pricing & Accounts
 
 ### Q: Is Agent24 free?
-**A:** Yes. The app is 100% free, open source (MIT), with **no ads, no in-app purchases, no subscription**. You only pay your own AI provider (e.g. OpenAI) if you use a paid model. Free models are supported too (OpenCode Zen free tier, Gemini free tier, Ollama local).
+**A:** Yes. The app is 100% free, open source (MIT), with **no in-app purchases and no subscription**. You only pay your own AI provider (e.g. OpenAI) if you use a paid model. Free models are supported too (OpenCode Zen free tier, Gemini free tier, Ollama local). If ads appear, they come from the project's own signed configuration — no third-party ad SDK, no advertising identifier, no ad tracking.
 
 ### Q: Do I need to create an account?
-**A:** No. There is no registration, no login, no server. Your data never leaves your device except to the AI provider **you** configured.
+**A:** No. There is no registration, no login, no Agent 24 server. Your conversations never leave your device except to the AI provider **you** configured (plus signed update/config checks, which contain no personal data).
 
 ### Q: Which AI providers are supported?
 **A:** 12 providers: OpenAI, Anthropic, Google Gemini, DeepSeek, Groq, xAI, Meta (via providers), Alibaba Qwen, Ollama (local), LM Studio (local), GitHub Copilot, and OpenCode Zen. Add keys in **Settings → Models**.
@@ -92,7 +92,7 @@
 **A:** [Open an issue](https://github.com/FoysalAhammad/agent24/issues/new?template=bug_report.md) with device, Android version, app version, steps to reproduce, and logs if available.
 
 ### Q: How do I report a security vulnerability?
-**A:** Do **not** open a public issue. Use [GitHub Security Advisories](https://github.com/FoysalAhammad/agent24/security/advisories) or email foysalahammad@gmail.com. Acknowledged within 7 days.
+**A:** Do **not** open a public issue. Use [GitHub Security Advisories](https://github.com/FoysalAhammad/agent24/security/advisories) (private reporting). Acknowledged within 7 days.
 
 ---
 
@@ -109,4 +109,4 @@
 
 ---
 
-*Last updated: 8 October 2025 · See also: [Privacy Policy](https://foysalahammad.github.io/agent24/#privacy) · [Documentation](https://foysalahammad.github.io/agent24/)*
+*Last updated: 10 October 2026 · See also: [Privacy Policy v2.0](https://foysalahammad.github.io/agent24/#privacy) · [Documentation](https://foysalahammad.github.io/agent24/)*

@@ -3,22 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agent 24 — Documentation</title>
-<meta name="description" content="Agent 24 — autonomous AI coding & technical assistant for Android. Full documentation.">
-<meta name="theme-color" content="#eef1f8">
-<meta property="og:title" content="Agent 24 — Documentation">
-<meta property="og:description" content="Autonomous AI coding & technical assistant for Android — agents, tools, permissions, providers and more.">
+<title>Agent 24 — AI Coding Assistant for Android</title>
+<meta name="description" content="Agent 24 is an open-source AI assistant for Android. It writes and edits code, runs shell commands, works with files and documents, and finishes multi-step tasks — local-first, no accounts.">
+<meta name="theme-color" content="#F6F7F9">
+<meta property="og:title" content="Agent 24 — AI Coding Assistant for Android">
+<meta property="og:description" content="Open-source, local-first AI assistant for Android: 31 tools, 12 model providers, agents, permissions and a full terminal.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://foysalahammad.github.io/agent24/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%234f46e5'/%3E%3Cstop offset='1' stop-color='%239333ea'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Inter,Arial,sans-serif' font-size='26' font-weight='800' fill='white' text-anchor='middle'%3EA24%3C/text%3E%3C/svg%3E">
+<meta property="og:image" content="https://foysalahammad.github.io/agent24/logo.png">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
 <link rel="canonical" href="https://foysalahammad.github.io/agent24/">
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
-  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></symbol><symbol id="i-home" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
   <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></symbol>
   <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
   <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
@@ -36,27 +38,28 @@
   <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
-  <symbol id="i-x" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
 </svg>
 
-<header class="topbar glass">
+<header class="topbar">
   <div class="topbar-inner">
     <button class="menu-btn" id="menuBtn" aria-label="Menu"><svg class="i"><use href="#i-menu"/></svg></button>
-    <a href="#home" class="brand"><span class="brand-mark">A24</span> Agent 24 <span class="brand-sub">Docs</span></a>
+    <a href="#home" class="brand"><img class="brand-logo" src="logo.png" alt="" width="36" height="36"> Agent 24 <span class="brand-sub">Docs</span></a>
     <nav class="topnav">
       <a href="#getting-started">Get Started</a>
       <a href="#agents">Agents</a>
       <a href="#tools">Tools</a>
       <a href="#privacy">Privacy</a>
-      <a href="#support">Support</a>
       <a href="https://github.com/FoysalAhammad/agent24" class="github-link" target="_blank" rel="noopener"><svg class="i i-sm"><use href="#i-github"/></svg> GitHub</a>
     </nav>
   </div>
 </header>
 
 <div class="layout">
-  <aside class="sidebar glass" id="sidebar">
+  <aside class="sidebar" id="sidebar">
     <div class="search-wrap">
       <svg class="i i-sm search-ico"><use href="#i-search"/></svg>
       <input type="search" id="search" placeholder="Search docs..." autocomplete="off">
@@ -84,88 +87,126 @@
         <a href="#sessions" class="nav-link"><svg class="i i-sm"><use href="#i-layers"/></svg>Sessions</a>
         <a href="#troubleshooting" class="nav-link"><svg class="i i-sm"><use href="#i-help"/></svg>Troubleshooting</a>
         <a href="#privacy" class="nav-link"><svg class="i i-sm"><use href="#i-shield"/></svg>Privacy Policy</a>
-        <a href="#support" class="nav-link"><svg class="i i-sm"><use href="#i-heart"/></svg>Support</a>
       </div>
     </nav>
     <div class="sidebar-footer">
-      <div class="ver">v1.0 &middot; 13 providers &middot; 31 tools</div>
+      <div class="ver">v0.1 · 12 providers · 31 tools</div>
     </div>
   </aside>
   <div class="overlay" id="overlay"></div>
 
   <main class="content" id="content">
-    <noscript><p class="noscript">This docs site needs JavaScript for navigation. Full content is in the repository.</p></noscript>
+    <noscript><p class="noscript">This documentation site requires JavaScript for navigation. The full content is available in the repository.</p></noscript>
 
+    <!-- ════════════ INTRODUCTION ════════════ -->
     <section id="home" class="page active">
       <div class="hero">
-        <div class="hero-badge glass">Autonomous &middot; Android &middot; Local-first</div>
+        <div class="hero-badge">Open source · Android · Local-first</div>
         <h1>Agent <span class="grad">24</span></h1>
-        <p class="lead">An autonomous AI coding &amp; technical assistant for Android — a terminal-based agent that reads, writes, edits and runs code, browses the web, and completes multi-step tasks on its own.</p>
+        <p class="lead">Agent 24 is an open-source AI assistant for Android. It writes and edits code, runs shell commands, works with files and documents, searches the web and finishes multi-step tasks — end to end, from your phone.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#getting-started">Get Started <svg class="i i-sm"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn-ghost glass" href="#tools">Explore Tools</a>
+          <a class="btn btn-primary" href="https://github.com/FoysalAhammad/agent24/releases" target="_blank" rel="noopener"><svg class="i i-sm"><use href="#i-download"/></svg> Download APK</a>
+          <a class="btn btn-ghost" href="#getting-started">Get Started <svg class="i i-sm"><use href="#i-arrow"/></svg></a>
         </div>
         <div class="stats">
-          <div class="stat glass"><b>31</b><span>Built-in tools</span></div>
-          <div class="stat glass"><b>13</b><span>Providers</span></div>
-          <div class="stat glass"><b>25+</b><span>Commands</span></div>
-          <div class="stat glass"><b>6</b><span>Agents</span></div>
+          <div class="stat"><b>31</b><span>Built-in tools</span></div>
+          <div class="stat"><b>12</b><span>Model providers</span></div>
+          <div class="stat"><b>25+</b><span>Slash commands</span></div>
+          <div class="stat"><b>100%</b><span>On-device data</span></div>
         </div>
       </div>
-      <div class="card-grid">
-        <a class="card glass" href="#agents"><div class="card-ico"><svg class="i"><use href="#i-users"/></svg></div><h3>Agents</h3><p>Build, plan, explore, scout and system agents — each with its own permission profile.</p></a>
-        <a class="card glass" href="#tools"><div class="card-ico"><svg class="i"><use href="#i-tool"/></svg></div><h3>Tools</h3><p>31 tools: shell, files, search, web, git, documents, vision, device sensors and more.</p></a>
-        <a class="card glass" href="#permissions"><div class="card-ico"><svg class="i"><use href="#i-shield"/></svg></div><h3>Permissions</h3><p>Allow / ask / deny gates on every tool, per agent — full control over what runs.</p></a>
-        <a class="card glass" href="#providers"><div class="card-ico"><svg class="i"><use href="#i-zap"/></svg></div><h3>Providers</h3><p>13 pre-configured model providers with auto-fallback and retry logic.</p></a>
+
+      <div class="bento">
+        <a class="card" href="#agents">
+          <div class="card-ico"><svg class="i"><use href="#i-users"/></svg></div>
+          <h3>Agents</h3>
+          <p>Build, plan, explore, scout and general agents, each with its own permission profile — plus system agents that run automatically.</p>
+        </a>
+        <a class="card" href="#tools">
+          <div class="card-ico"><svg class="i"><use href="#i-tool"/></svg></div>
+          <h3>Tools</h3>
+          <p>31 tools: shell, files, search, web, git, documents, PDF, vision, device sensors and scheduling.</p>
+        </a>
+        <a class="card" href="#permissions">
+          <div class="card-ico"><svg class="i"><use href="#i-shield"/></svg></div>
+          <h3>Permissions</h3>
+          <p>Allow, ask or deny every tool — per agent. Nothing runs without the policy you set.</p>
+        </a>
+        <a class="card" href="#providers">
+          <div class="card-ico"><svg class="i"><use href="#i-zap"/></svg></div>
+          <h3>Providers</h3>
+          <p>12 pre-configured model providers with capability flags, retries and automatic fallback.</p>
+        </a>
+        <a class="card" href="#skills">
+          <div class="card-ico"><svg class="i"><use href="#i-book"/></svg></div>
+          <h3>Skills</h3>
+          <p>Loadable instruction packs — including a built-in design-style system for UI builds.</p>
+        </a>
+        <a class="card" href="#privacy">
+          <div class="card-ico"><svg class="i"><use href="#i-eye"/></svg></div>
+          <h3>Privacy</h3>
+          <p>No account, no registration. Chat history and API keys never leave your device.</p>
+        </a>
       </div>
+
       <h2>Quick start</h2>
-      <ol class="steps glass">
-        <li>Connect a provider — <code>/connect</code></li>
-        <li>Pick a model — <code>/model</code></li>
-        <li>Start a task: just type what you want built.</li>
+      <ol class="steps">
+        <li>Install the APK from <a href="https://github.com/FoysalAhammad/agent24/releases" target="_blank" rel="noopener">GitHub Releases</a> and open Agent 24.</li>
+        <li>Connect a provider with <code>/connect</code> — free models work with zero setup.</li>
+        <li>Pick a model — <code>/model</code>.</li>
+        <li>Describe the task in plain language. The agent takes it from there.</li>
       </ol>
     </section>
 
+    <!-- ════════════ GETTING STARTED ════════════ -->
     <section id="getting-started" class="page">
       <h1>Getting Started</h1>
-      <p class="lead-sm">Three minutes from install to your first completed task.</p>
-      <h2>1. Install &amp; open</h2>
-      <p>Install Agent 24, open it, and grant the accessibility permission when prompted (required for screen understanding and UI dumping).</p>
+      <p class="lead-sm">From install to your first completed task in about three minutes.</p>
+
+      <h2>1. Install</h2>
+      <p>Download the latest APK from <a href="https://github.com/FoysalAhammad/agent24/releases" target="_blank" rel="noopener">GitHub Releases</a>, install it and open the app. When prompted, grant the accessibility permission — it is required for screen understanding and UI dumping. No account or sign-up is needed.</p>
+
       <h2>2. Connect a provider</h2>
-      <p>Run <code>/connect</code> and pick from 13 pre-configured providers — OpenCode Zen, Pollinations (free), OpenAI, Anthropic, Google, Groq, DeepSeek, Mistral, xAI, Together, OpenRouter, HuggingFace, GitHub Models. Free options work with zero setup.</p>
+      <p>Run <code>/connect</code> and choose one of the 12 pre-configured providers (see <a href="#providers">Providers</a>). Free-tier models are available out of the box; paid providers only need an API key, entered once and stored in the Android Keystore.</p>
+
       <h2>3. Choose a model</h2>
-      <p><code>/model</code> lists every model of the connected provider with capability flags: <em>supportsTools</em>, <em>supportsImages</em>, <em>supportsReasoning</em>, <em>supportsStreaming</em>.</p>
+      <p><code>/model</code> lists every model of the connected provider together with its capability flags: <em>supportsTools</em>, <em>supportsImages</em>, <em>supportsReasoning</em> and <em>supportsStreaming</em>.</p>
+
       <h2>4. Start working</h2>
-      <p>Just type the task in natural language:</p>
+      <p>Describe the task in natural language — in English, Bangla or Banglish:</p>
       <div class="code"><pre>&gt; build a calculator app with history
 &gt; find every TODO in src/ and summarize
-&gt; refactor utils.js and run the tests</pre></div>
+&gt; refactor utils.js and run the tests
+&gt; make me a PDF invoice from this data</pre></div>
+
       <h2>Keyboard</h2>
-      <div class="table-wrap glass"><table>
+      <div class="table-wrap"><table>
         <thead><tr><th>Key</th><th>Action</th></tr></thead>
         <tbody>
-          <tr><td><code>/</code></td><td>Focus search / command palette</td></tr>
-          <tr><td><code>Ctrl/Cmd + K</code></td><td>Command palette</td></tr>
+          <tr><td><code>/</code></td><td>Open the command palette</td></tr>
           <tr><td><code>Esc</code></td><td>Close overlay / cancel</td></tr>
         </tbody>
       </table></div>
     </section>
 
+    <!-- ════════════ AGENTS ════════════ -->
     <section id="agents" class="page">
       <h1>Agents</h1>
-      <p class="lead-sm">Primary/sub agents you select, plus system agents that trigger automatically.</p>
-      <div class="table-wrap glass"><table>
+      <p class="lead-sm">Selectable primary and sub-agents, plus system agents that trigger automatically.</p>
+
+      <div class="table-wrap"><table>
         <thead><tr><th>Agent</th><th>Mode</th><th>Permissions</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td><b>build</b></td><td><span class="pill pill-green">primary</span></td><td><code>*: allow</code></td><td>Default agent, full access</td></tr>
-          <tr><td><b>plan</b></td><td><span class="pill pill-green">primary</span></td><td><code>edit: ask, bash: ask</code></td><td>Read-only analysis</td></tr>
-          <tr><td><b>general</b></td><td><span class="pill pill-blue">subagent</span></td><td><code>*: allow</code></td><td>General multi-step tasks</td></tr>
+          <tr><td><b>build</b></td><td><span class="pill pill-green">primary</span></td><td><code>*: allow</code></td><td>Default agent, full tool access</td></tr>
+          <tr><td><b>plan</b></td><td><span class="pill pill-green">primary</span></td><td><code>edit: ask, bash: ask</code></td><td>Read-only analysis, confirms edits</td></tr>
+          <tr><td><b>general</b></td><td><span class="pill pill-blue">subagent</span></td><td><code>*: allow</code></td><td>General-purpose multi-step tasks</td></tr>
           <tr><td><b>explore</b></td><td><span class="pill pill-blue">subagent</span></td><td><code>read-only set</code></td><td>Fast codebase exploration</td></tr>
-          <tr><td><b>scout</b></td><td><span class="pill pill-blue">subagent</span></td><td><code>read/web only</code></td><td>External docs &amp; research</td></tr>
+          <tr><td><b>scout</b></td><td><span class="pill pill-blue">subagent</span></td><td><code>read/web only</code></td><td>External docs &amp; dependency research</td></tr>
         </tbody>
       </table></div>
+
       <h2>System agents</h2>
-      <div class="table-wrap glass"><table>
+      <div class="table-wrap"><table>
         <thead><tr><th>Agent</th><th>Trigger</th><th>Purpose</th></tr></thead>
         <tbody>
           <tr><td>compaction</td><td>Tokens &gt; 80%</td><td>Context summarization</td></tr>
@@ -173,8 +214,9 @@
           <tr><td>summary</td><td>Session switch</td><td>Conversation summary</td></tr>
         </tbody>
       </table></div>
+
       <h2>Permission matrix</h2>
-      <div class="table-wrap glass"><table class="matrix">
+      <div class="table-wrap"><table class="matrix">
         <thead><tr><th>Tool</th><th>build</th><th>plan</th><th>general</th><th>explore</th><th>scout</th></tr></thead>
         <tbody>
           <tr><td>read</td><td><span class="perm perm-ok">allow</span></td><td><span class="perm perm-ok">allow</span></td><td><span class="perm perm-ok">allow</span></td><td><span class="perm perm-ok">allow</span></td><td><span class="perm perm-ok">allow</span></td></tr>
@@ -186,95 +228,146 @@
           <tr><td>task / question</td><td><span class="perm perm-ok">allow</span></td><td><span class="perm perm-ok">allow</span></td><td><span class="perm perm-ok">allow</span></td><td><span class="perm perm-no">deny</span></td><td><span class="perm perm-no">deny</span></td></tr>
         </tbody>
       </table></div>
-      <p class="legend">allow = run silently &middot; ask = confirm popup &middot; deny = blocked</p>
+      <p class="legend">allow = runs silently · ask = confirmation popup · deny = blocked</p>
     </section>
 
+    <!-- ════════════ TOOLS ════════════ -->
     <section id="tools" class="page">
       <h1>Tools</h1>
-      <p class="lead-sm">31 built-in tools. Every tool takes a JSON parameter map.</p>
-      <div class="table-wrap glass"><table>
-        <thead><tr><th>#</th><th>Tool</th><th>Class</th><th>Description</th></tr></thead>
+      <p class="lead-sm">31 built-in tools. Every tool receives a JSON parameter map and passes through the permission layer first.</p>
+
+      <h2>Terminal &amp; shell</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Tool</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td>1</td><td><code>bash</code></td><td>BashTool</td><td>Execute shell commands</td></tr>
-          <tr><td>2</td><td><code>shell</code></td><td>ShellTool</td><td>Persistent shell sessions</td></tr>
-          <tr><td>3</td><td><code>read</code></td><td>ReadTool</td><td>Read file contents</td></tr>
-          <tr><td>4</td><td><code>write</code></td><td>WriteTool</td><td>Create / overwrite files</td></tr>
-          <tr><td>5</td><td><code>edit</code></td><td>EditTool</td><td>Find &amp; replace edits</td></tr>
-          <tr><td>6</td><td><code>grep</code></td><td>GrepTool</td><td>Regex content search</td></tr>
-          <tr><td>7</td><td><code>glob</code></td><td>GlobTool</td><td>Find files by pattern</td></tr>
-          <tr><td>8</td><td><code>list</code></td><td>ListTool</td><td>List directory contents</td></tr>
-          <tr><td>9</td><td><code>diff</code></td><td>DiffTool</td><td>Unified diff preview</td></tr>
-          <tr><td>10</td><td><code>apply_patch</code></td><td>ApplyPatchTool</td><td>Apply unified patches</td></tr>
-          <tr><td>11</td><td><code>webfetch</code></td><td>WebfetchTool</td><td>Fetch URL content</td></tr>
-          <tr><td>12</td><td><code>websearch</code></td><td>WebsearchTool</td><td>Search the web</td></tr>
-          <tr><td>13</td><td><code>task</code></td><td>TaskTool</td><td>Delegate to subagents</td></tr>
-          <tr><td>14</td><td><code>skill</code></td><td>SkillTool</td><td>Load specialized skills</td></tr>
-          <tr><td>15</td><td><code>question</code></td><td>QuestionTool</td><td>Interactive user prompts</td></tr>
-          <tr><td>16</td><td><code>todowrite</code></td><td>TodoWriteTool</td><td>Task list management</td></tr>
-          <tr><td>17</td><td><code>todoread</code></td><td>TodoReadTool</td><td>Read todo state</td></tr>
-          <tr><td>18</td><td><code>git</code></td><td>GitTool</td><td>Git status/diff/commit/…</td></tr>
-          <tr><td>19</td><td><code>archive</code></td><td>ArchiveTool</td><td>Zip / tar create &amp; extract</td></tr>
-          <tr><td>20</td><td><code>cv_maker</code></td><td>CvMakerTool</td><td>Generate a CV as PDF</td></tr>
-          <tr><td>21</td><td><code>docx_maker</code></td><td>DocxMakerTool</td><td>Generate Word documents</td></tr>
-          <tr><td>22</td><td><code>image_analyze</code></td><td>ImageAnalyzeTool</td><td>OCR &amp; structure analysis</td></tr>
-          <tr><td>23</td><td><code>image_describe</code></td><td>ImageDescribeTool</td><td>Describe images for the model</td></tr>
-          <tr><td>24</td><td><code>memory</code></td><td>MemoryTool</td><td>Long-term memory across sessions</td></tr>
-          <tr><td>25</td><td><code>pdf</code></td><td>PdfTool</td><td>Read / extract PDF text</td></tr>
-          <tr><td>26</td><td><code>pdf_edit</code></td><td>PdfEditTool</td><td>Edit existing PDFs</td></tr>
-          <tr><td>27</td><td><code>pdf_maker</code></td><td>PdfMakerTool</td><td>Generate PDF documents</td></tr>
-          <tr><td>28</td><td><code>schedule</code></td><td>ScheduleTool</td><td>Timed commands via alarms</td></tr>
-          <tr><td>29</td><td><code>screenshot</code></td><td>ScreenshotTool</td><td>Capture device screenshots</td></tr>
-          <tr><td>30</td><td><code>ui_dump</code></td><td>UiDumpTool</td><td>Dump the UI hierarchy</td></tr>
-          <tr><td>31</td><td><code>sensor</code></td><td>SensorTool</td><td>Read sensors &amp; control hardware (torch, vibrate, brightness, wifi…), root when needed</td></tr>
+          <tr><td><code>bash</code></td><td>Execute shell commands</td></tr>
+          <tr><td><code>shell</code></td><td>Persistent shell sessions</td></tr>
         </tbody>
       </table></div>
+
+      <h2>Files</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Tool</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>read</code></td><td>Read file contents</td></tr>
+          <tr><td><code>write</code></td><td>Create or overwrite files</td></tr>
+          <tr><td><code>edit</code></td><td>Find &amp; replace edits</td></tr>
+          <tr><td><code>diff</code></td><td>Unified diff preview</td></tr>
+          <tr><td><code>apply_patch</code></td><td>Apply unified patches</td></tr>
+          <tr><td><code>archive</code></td><td>Zip / tar create &amp; extract</td></tr>
+          <tr><td><code>list</code></td><td>List directory contents</td></tr>
+        </tbody>
+      </table></div>
+
+      <h2>Search</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Tool</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>grep</code></td><td>Regex content search</td></tr>
+          <tr><td><code>glob</code></td><td>Find files by pattern</td></tr>
+        </tbody>
+      </table></div>
+
+      <h2>Web</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Tool</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>webfetch</code></td><td>Fetch URL content</td></tr>
+          <tr><td><code>websearch</code></td><td>Search the web</td></tr>
+        </tbody>
+      </table></div>
+
+      <h2>Agent &amp; workflow</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Tool</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>task</code></td><td>Delegate to subagents</td></tr>
+          <tr><td><code>skill</code></td><td>Load specialized skills</td></tr>
+          <tr><td><code>question</code></td><td>Interactive multi-choice prompts</td></tr>
+          <tr><td><code>todowrite</code> / <code>todoread</code></td><td>Task list management</td></tr>
+          <tr><td><code>git</code></td><td>Git status, diff, commit, branch, log</td></tr>
+          <tr><td><code>memory</code></td><td>Long-term memory across sessions</td></tr>
+          <tr><td><code>schedule</code></td><td>Timed commands via alarms</td></tr>
+        </tbody>
+      </table></div>
+
+      <h2>Documents</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Tool</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>pdf</code></td><td>Read / extract PDF text</td></tr>
+          <tr><td><code>pdf_edit</code></td><td>Edit existing PDFs</td></tr>
+          <tr><td><code>pdf_maker</code></td><td>Generate PDF documents</td></tr>
+          <tr><td><code>docx_maker</code></td><td>Generate Word documents</td></tr>
+          <tr><td><code>cv_maker</code></td><td>Generate a CV as PDF</td></tr>
+        </tbody>
+      </table></div>
+
+      <h2>Vision &amp; device</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Tool</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><code>image_analyze</code></td><td>OCR &amp; structure analysis</td></tr>
+          <tr><td><code>image_describe</code></td><td>Describe images for the model</td></tr>
+          <tr><td><code>screenshot</code></td><td>Capture device screenshots</td></tr>
+          <tr><td><code>ui_dump</code></td><td>Dump the UI hierarchy</td></tr>
+          <tr><td><code>sensor</code></td><td>Device sensors &amp; hardware control (torch, vibrate, brightness, Wi-Fi…) — root when available</td></tr>
+        </tbody>
+      </table></div>
+
       <h2>Execution flow</h2>
       <div class="code"><pre>user action → check permission rules
   → deny  → blocked immediately
   → ask   → confirmation popup → wait for user
   → allow → action runs</pre></div>
+
       <h2>Example calls</h2>
       <div class="code"><pre>bash    { "command": "ls -la" }
-read    { "path": "/path/to/file" }
-edit    { "path": "...", "oldString": "find", "newString": "replace" }
+read    { "file_path": "/path/to/file" }
+edit    { "file_path": "...", "old_string": "find", "new_string": "replace" }
 grep    { "pattern": "regex", "path": "/dir", "include": "*.md" }
 task    { "description": "...", "prompt": "...", "subagent_type": "explore" }</pre></div>
     </section>
 
+    <!-- ════════════ COMMANDS ════════════ -->
     <section id="commands" class="page">
       <h1>Commands</h1>
       <p class="lead-sm">25+ slash commands for session and workflow control.</p>
-      <div class="table-wrap glass"><table>
+      <div class="table-wrap"><table>
         <thead><tr><th>Command</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td><code>/new</code></td><td>Start new session</td></tr>
+          <tr><td><code>/new</code></td><td>Start a new session</td></tr>
           <tr><td><code>/clear</code></td><td>Clear chat messages</td></tr>
-          <tr><td><code>/sessions</code></td><td>Show session list</td></tr>
-          <tr><td><code>/model</code></td><td>Change AI model</td></tr>
+          <tr><td><code>/sessions</code></td><td>Show the session list</td></tr>
+          <tr><td><code>/model</code></td><td>Change the AI model</td></tr>
           <tr><td><code>/connect</code></td><td>Connect a provider</td></tr>
           <tr><td><code>/build</code> <code>/plan</code></td><td>Switch agent mode</td></tr>
-          <tr><td><code>/init</code></td><td>Initialize project</td></tr>
-          <tr><td><code>/diff</code></td><td>Show real git diff</td></tr>
-          <tr><td><code>/undo</code> <code>/redo</code></td><td>Undo / redo last tracked file change</td></tr>
-          <tr><td><code>/fork</code></td><td>Duplicate session into a copy</td></tr>
+          <tr><td><code>/init</code></td><td>Initialize a project</td></tr>
+          <tr><td><code>/cwd [path]</code></td><td>Show or set the session working directory</td></tr>
+          <tr><td><code>/diff</code></td><td>Show the real git diff</td></tr>
+          <tr><td><code>/undo</code> <code>/redo</code></td><td>Undo / redo the last tracked file change</td></tr>
+          <tr><td><code>/fork</code></td><td>Duplicate the session into a copy</td></tr>
           <tr><td><code>/review</code></td><td>Code review</td></tr>
-          <tr><td><code>/component</code></td><td>Create component</td></tr>
+          <tr><td><code>/component</code></td><td>Create a component</td></tr>
           <tr><td><code>/compact</code></td><td>Summarize context (chat history stays)</td></tr>
-          <tr><td><code>/share</code></td><td>Share via Android share sheet</td></tr>
+          <tr><td><code>/share</code></td><td>Share via the Android share sheet</td></tr>
           <tr><td><code>/skills</code></td><td>List skills</td></tr>
           <tr><td><code>/agents</code></td><td>List agents</td></tr>
           <tr><td><code>/theme</code></td><td>Change theme (picker dialog)</td></tr>
-          <tr><td><code>/export</code> <code>/import</code></td><td>Export / import session</td></tr>
+          <tr><td><code>/test</code></td><td>Run the project's test suite</td></tr>
+          <tr><td><code>/export</code> <code>/import</code></td><td>Export / import a session</td></tr>
           <tr><td><code>/help</code></td><td>Show help</td></tr>
         </tbody>
       </table></div>
     </section>
 
+    <!-- ════════════ PERMISSIONS ════════════ -->
     <section id="permissions" class="page">
       <h1>Permissions</h1>
-      <p class="lead-sm">Every tool call passes through the permission layer before executing.</p>
+      <p class="lead-sm">Every tool call passes through the permission layer before it executes.</p>
+
       <h2>Permission keys</h2>
-      <div class="table-wrap glass"><table>
+      <div class="table-wrap"><table>
         <thead><tr><th>Key</th><th>Gates</th></tr></thead>
         <tbody>
           <tr><td><code>read</code></td><td>read</td></tr>
@@ -282,53 +375,56 @@ task    { "description": "...", "prompt": "...", "subagent_type": "explore" }</p
           <tr><td><code>bash</code></td><td>bash, shell</td></tr>
           <tr><td><code>glob</code> / <code>grep</code> / <code>list</code></td><td>respective tools</td></tr>
           <tr><td><code>task</code></td><td>task</td></tr>
-          <tr><td><code>external_directory</code></td><td>any tool outside workspace</td></tr>
+          <tr><td><code>external_directory</code></td><td>any tool outside the workspace</td></tr>
           <tr><td><code>todowrite</code></td><td>todowrite, todoread</td></tr>
           <tr><td><code>webfetch</code> / <code>websearch</code></td><td>web tools</td></tr>
           <tr><td><code>skill</code> / <code>question</code></td><td>skill, question</td></tr>
           <tr><td><code>doom_loop</code></td><td>stuck-agent recovery</td></tr>
         </tbody>
       </table></div>
+
       <h2>Values</h2>
-      <div class="table-wrap glass"><table>
+      <div class="table-wrap"><table>
         <thead><tr><th>Value</th><th>Behavior</th></tr></thead>
         <tbody>
           <tr><td><span class="perm perm-ok">allow</span></td><td>Execute without asking</td></tr>
-          <tr><td><span class="perm perm-ask">ask</span></td><td>Show popup, wait for user decision</td></tr>
+          <tr><td><span class="perm perm-ask">ask</span></td><td>Show a popup, wait for the user's decision</td></tr>
           <tr><td><span class="perm perm-no">deny</span></td><td>Block execution entirely</td></tr>
         </tbody>
       </table></div>
+
       <h2>Evaluation order</h2>
-      <ol class="steps glass">
-        <li>Check agent-specific permission for the tool name</li>
-        <li>Check wildcard (<code>*</code>) permission</li>
-        <li>Default: <b>allow</b> (build) / <b>ask</b> (plan)</li>
+      <ol class="steps">
+        <li>Check the agent-specific permission for the tool name.</li>
+        <li>Check the wildcard (<code>*</code>) permission.</li>
+        <li>Default: <b>allow</b> for build, <b>ask</b> for plan.</li>
       </ol>
     </section>
 
+    <!-- ════════════ PROVIDERS ════════════ -->
     <section id="providers" class="page">
       <h1>Providers</h1>
-      <p class="lead-sm">13 pre-configured providers with capability flags and auto-fallback.</p>
-      <div class="table-wrap glass"><table>
-        <thead><tr><th>Provider</th><th>Base URL</th><th>Models</th></tr></thead>
+      <p class="lead-sm">12 pre-configured providers with capability flags, retries and automatic fallback. Bring your own key where needed — free options work with zero setup.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Provider</th><th>What you get</th></tr></thead>
         <tbody>
-          <tr><td>OpenCode Zen</td><td><code>https://opencodezen.ai</code></td><td>mimo-v2.5-free, gpt-5, claude-sonnet-4</td></tr>
-          <tr><td>Pollinations</td><td><code>https://text.pollinations.ai/openai</code></td><td>openai-fast, gpt-oss-20b</td></tr>
-          <tr><td>OpenAI</td><td><code>https://api.openai.com/v1</code></td><td>gpt-4o, gpt-4o-mini, o1</td></tr>
-          <tr><td>Anthropic</td><td><code>https://api.anthropic.com/v1</code></td><td>claude-sonnet-4, claude-haiku</td></tr>
-          <tr><td>Google</td><td><code>https://generativelanguage.googleapis.com/v1beta</code></td><td>gemini-2.0-flash, gemini-1.5-pro</td></tr>
-          <tr><td>Groq</td><td><code>https://api.groq.com/openai/v1</code></td><td>llama-3.3-70b, mixtral-8x7b</td></tr>
-          <tr><td>DeepSeek</td><td><code>https://api.deepseek.com/v1</code></td><td>deepseek-chat, deepseek-coder</td></tr>
-          <tr><td>Mistral</td><td><code>https://api.mistral.ai/v1</code></td><td>mistral-large, codestral</td></tr>
-          <tr><td>xAI</td><td><code>https://api.x.ai/v1</code></td><td>grok-2, grok-2-mini</td></tr>
-          <tr><td>Together</td><td><code>https://api.together.xyz/v1</code></td><td>llama-3.3-70b, codellama</td></tr>
-          <tr><td>OpenRouter</td><td><code>https://openrouter.ai/api/v1</code></td><td>multi-provider</td></tr>
-          <tr><td>HuggingFace</td><td><code>https://api-inference.huggingface.co/v1</code></td><td>various</td></tr>
-          <tr><td>GitHub Models</td><td><code>https://models.inference.ai.azure.com</code></td><td>gpt-4o, codestral</td></tr>
+          <tr><td><b>OpenCode Zen</b></td><td>Free-tier models with zero setup — the quickest way to start</td></tr>
+          <tr><td><b>OpenAI</b></td><td>The GPT family, with tool calling and vision on supported models</td></tr>
+          <tr><td><b>Anthropic</b></td><td>The Claude family, strong at long-context coding tasks</td></tr>
+          <tr><td><b>Google Gemini</b></td><td>The Gemini family, with large context and multimodal input</td></tr>
+          <tr><td><b>DeepSeek</b></td><td>DeepSeek V4 models, cost-efficient coding</td></tr>
+          <tr><td><b>Groq</b></td><td>Extremely fast inference for open models</td></tr>
+          <tr><td><b>xAI</b></td><td>The Grok family</td></tr>
+          <tr><td><b>Meta</b></td><td>Llama models through a custom OpenAI-compatible endpoint</td></tr>
+          <tr><td><b>Alibaba (Qwen)</b></td><td>The Qwen family over an OpenAI-compatible endpoint</td></tr>
+          <tr><td><b>Ollama</b></td><td>Models running locally on your own network — fully offline</td></tr>
+          <tr><td><b>LM Studio</b></td><td>Local desktop models — fully offline</td></tr>
+          <tr><td><b>GitHub Copilot</b></td><td>Your Copilot subscription, if you already have one</td></tr>
         </tbody>
       </table></div>
+
       <h2>Model capabilities</h2>
-      <div class="table-wrap glass"><table>
+      <div class="table-wrap"><table>
         <thead><tr><th>Flag</th><th>Description</th></tr></thead>
         <tbody>
           <tr><td><code>supportsTools</code></td><td>Tool calling</td></tr>
@@ -337,11 +433,12 @@ task    { "description": "...", "prompt": "...", "subagent_type": "explore" }</p
           <tr><td><code>supportsStreaming</code></td><td>SSE streaming</td></tr>
         </tbody>
       </table></div>
+
       <h2>Error handling</h2>
-      <div class="table-wrap glass"><table>
+      <div class="table-wrap"><table>
         <thead><tr><th>HTTP</th><th>Type</th><th>User message</th></tr></thead>
         <tbody>
-          <tr><td>401</td><td>Authentication</td><td>Invalid API key. Check Settings &gt; Models.</td></tr>
+          <tr><td>401</td><td>Authentication</td><td>Invalid API key. Check Settings → Models.</td></tr>
           <tr><td>402</td><td>Payment</td><td>Quota exhausted. Add credits or switch provider.</td></tr>
           <tr><td>403</td><td>Access denied</td><td>No permission for this model.</td></tr>
           <tr><td>404</td><td>Not found</td><td>Model not available. Try another.</td></tr>
@@ -349,83 +446,100 @@ task    { "description": "...", "prompt": "...", "subagent_type": "explore" }</p
           <tr><td>5xx</td><td>Server error</td><td>Provider unavailable. Retrying…</td></tr>
         </tbody>
       </table></div>
-      <p><b>Retry:</b> max 3 attempts, exponential backoff 2s → 4s → 8s (429: 5s → 10s → 15s), auto-fallback to Pollinations on 4xx/5xx.</p>
+      <p><b>Retry policy:</b> up to 3 attempts with exponential backoff (2s → 4s → 8s; for 429: 5s → 10s → 15s). A failing free-tier model is automatically retried once on a backup model, with a notice in the reply.</p>
     </section>
 
+    <!-- ════════════ SETTINGS ════════════ -->
     <section id="settings" class="page">
       <h1>Settings</h1>
-      <p class="lead-sm">Runtime configuration lives in <code>~/.config/agent24/</code>.</p>
-      <div class="table-wrap glass"><table>
+      <p class="lead-sm">Runtime configuration lives in <code>~/.config/agent24/</code> and can be edited with any file manager.</p>
+      <div class="table-wrap"><table>
         <thead><tr><th>Path</th><th>Purpose</th></tr></thead>
         <tbody>
-          <tr><td><code>agent24.json</code></td><td>Main config file</td></tr>
-          <tr><td><code>AGENTS.md</code></td><td>Base system prompt</td></tr>
+          <tr><td><code>agent24.json</code></td><td>Main configuration file</td></tr>
+          <tr><td><code>AGENTS.md</code></td><td>Base system prompt / instructions</td></tr>
+          <tr><td><code>env</code></td><td>User secrets (API keys)</td></tr>
           <tr><td><code>agents/</code></td><td>Agent prompt files</td></tr>
           <tr><td><code>skills/</code></td><td>Skill definitions</td></tr>
           <tr><td><code>commands/</code></td><td>Custom slash commands</td></tr>
           <tr><td><code>prompts/</code></td><td>Custom prompts</td></tr>
         </tbody>
       </table></div>
+
       <h2>Useful toggles</h2>
       <ul>
         <li><code>show_reasoning</code> — thinking card visibility</li>
         <li><code>auto_summarize</code> — auto-summary on session switch</li>
         <li><code>compaction_threshold</code> — token % that triggers compaction (default 80)</li>
+        <li>Reply language — mirror the user's language, or force one language</li>
         <li>Theme — change with <code>/theme</code> (picker dialog)</li>
       </ul>
       <p>See also: <a href="#skills">Skills</a>, <a href="#mcp">MCP</a>, <a href="#hooks">Hooks</a>.</p>
     </section>
 
+    <!-- ════════════ SKILLS ════════════ -->
     <section id="skills" class="page">
       <h1>Skills</h1>
-      <p class="lead-sm">Markdown instruction files loaded into the system prompt on demand.</p>
+      <p class="lead-sm">Markdown instruction packs loaded into the system prompt on demand.</p>
+
       <h2>Location</h2>
       <div class="code"><pre>~/.config/agent24/skills/&lt;name&gt;.md</pre></div>
+
       <h2>Usage</h2>
-      <p>Load with the <code>skill</code> tool or ask the agent directly — it pulls the file into context:</p>
-      <div class="code"><pre>{ "tool": "skill", "params": { "name": "settings-customization" } }</pre></div>
+      <p>Load with the <code>skill</code> tool, or just ask — the agent pulls the file into context:</p>
+      <div class="code"><pre>{ "tool": "skill", "params": { "name": "glassmorphism" } }</pre></div>
+
+      <h2>Bundled skills</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Skill</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td><code>settings-customization</code></td><td>How to modify configuration safely</td></tr>
+          <tr><td><code>design-styles</code></td><td>Selector &amp; heuristic over the design corpus</td></tr>
+          <tr><td><code>minimalism</code> … <code>maximalism</code></td><td>10 self-contained UI design styles (bento-grid, glassmorphism, liquid-glass, claymorphism, brutalism, neumorphism, skeuomorphism, spatial-ui and more)</td></tr>
+        </tbody>
+      </table></div>
+      <p>When you ask the app to build any UI, the agent first asks you to pick one of the 10 design styles (or describe your own) and then follows that skill for the whole build. List everything with <code>/skills</code>.</p>
+
       <h2>Structure</h2>
       <ul>
-        <li>One markdown file per skill</li>
+        <li>One markdown file per skill (or a directory with <code>SKILL.md</code>)</li>
         <li>Loaded skills are listed at the bottom of the system prompt</li>
-        <li>Related assets can sit next to the file</li>
-        <li>List everything with <code>/skills</code></li>
+        <li>User-edited skill files are never overwritten by app updates</li>
       </ul>
-      <h2>Example</h2>
-      <div class="code"><pre># settings-customization
-How to modify agent24.json safely: keys, defaults,
-restart behavior and rollback steps.</pre></div>
     </section>
 
+    <!-- ════════════ MCP ════════════ -->
     <section id="mcp" class="page">
       <h1>MCP</h1>
-      <p class="lead-sm">Model Context Protocol — connect external tool servers.</p>
+      <p class="lead-sm">Model Context Protocol — connect external tool servers to extend the agent.</p>
+
       <h2>Registering a server</h2>
       <div class="code"><pre>{
   "server": "my-server",
   "instructions": "shown to the model in the system prompt",
   "tools": [ { "name": "create_issue", "inputSchema": { ... } } ]
-}
+}</pre></div>
 
-Calling any of these tools routes the result back to the model.</pre></div>
       <h2>Naming</h2>
-      <p>MCP tools are prefixed with <code>mcp_{serverName}_{toolName}</code> so they never collide with built-ins.</p>
+      <p>MCP tools are prefixed with <code>mcp_{serverName}_{toolName}</code> so they never collide with built-ins:</p>
       <div class="code"><pre>mcp_github_create_issue
 mcp_slack_send_message</pre></div>
+
       <h2>Flow</h2>
-      <ol class="steps glass">
-        <li>Server registers tools &amp; instructions</li>
-        <li>Instructions join the system prompt</li>
-        <li>Tool definitions join the API tool list</li>
-        <li>Model calls <code>mcp_*</code> → routed to the server</li>
+      <ol class="steps">
+        <li>The server registers tools and instructions.</li>
+        <li>Instructions join the system prompt.</li>
+        <li>Tool definitions join the API tool list.</li>
+        <li>A model call to <code>mcp_*</code> is routed to the server.</li>
       </ol>
     </section>
 
+    <!-- ════════════ HOOKS ════════════ -->
     <section id="hooks" class="page">
       <h1>Hooks</h1>
-      <p class="lead-sm">Deterministic actions that run on lifecycle events — no model involved.</p>
-      <div class="table-wrap glass"><table>
-        <thead><tr><th>Hook</th><th>When</th></tr></thead>
+      <p class="lead-sm">Deterministic events that fire on session and tool lifecycle — no model involved.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Event</th><th>When</th></tr></thead>
         <tbody>
           <tr><td>session.created</td><td>New session starts</td></tr>
           <tr><td>session.loaded</td><td>Existing session opened</td></tr>
@@ -438,45 +552,30 @@ mcp_slack_send_message</pre></div>
           <tr><td>permission.requested</td><td>Permission popup shown</td></tr>
         </tbody>
       </table></div>
-      <h2>Event system</h2>
-      <div class="code"><pre>session.created(sessionId)
-session.loaded(sessionId)
-session.deleted(sessionId)
-session.renamed(sessionId, newTitle)</pre></div>
-      <p>Typical uses: telemetry, auto-backup before edits, audit logging, custom notifications.</p>
+      <p>Typical uses: telemetry, auto-backup before edits, audit logging and custom notifications.</p>
     </section>
 
+    <!-- ════════════ SESSIONS ════════════ -->
     <section id="sessions" class="page">
       <h1>Sessions</h1>
       <p class="lead-sm">Every conversation is an isolated session with its own database.</p>
+
       <h2>Lifecycle</h2>
-      <div class="code"><pre>startNewSession()  → id "session_" + timestamp → metadata → session database → event
+      <div class="code"><pre>startNewSession()  → id "session_" + timestamp → metadata → session DB → event
 loadSession(id)    → set current → load messages → update timestamp → event
-deleteSession(id)  → drop database + folders + metadata → clear memory → event</pre></div>
+deleteSession(id)  → drop DB + folders + metadata → clear memory → event</pre></div>
+
       <h2>Storage</h2>
-      <div class="table-wrap glass"><table>
+      <div class="table-wrap"><table>
         <thead><tr><th>Database</th><th>Path</th></tr></thead>
         <tbody>
           <tr><td>Session DB</td><td><code>~/.local/share/agent24/sessions/{id}/session.db</code></td></tr>
           <tr><td>Global DB</td><td><code>~/.local/share/agent24/databases/agent24_global.db</code></td></tr>
         </tbody>
       </table></div>
-      <h2>Message senders</h2>
-      <div class="table-wrap glass"><table>
-        <thead><tr><th>Value</th><th>Name</th><th>Description</th></tr></thead>
-        <tbody>
-          <tr><td>0</td><td>USER</td><td>User message</td></tr>
-          <tr><td>1</td><td>AGENT</td><td>AI response</td></tr>
-          <tr><td>2</td><td>SYSTEM</td><td>System message</td></tr>
-          <tr><td>3</td><td>COMMAND</td><td>Command output</td></tr>
-          <tr><td>4</td><td>ERROR</td><td>Error message</td></tr>
-          <tr><td>5</td><td>PERMISSION</td><td>Permission request</td></tr>
-          <tr><td>6</td><td>THINKING</td><td>Reasoning / thinking</td></tr>
-          <tr><td>7</td><td>TODO</td><td>Todo update</td></tr>
-        </tbody>
-      </table></div>
+
       <h2>Auto features</h2>
-      <div class="table-wrap glass"><table>
+      <div class="table-wrap"><table>
         <thead><tr><th>Feature</th><th>Trigger</th></tr></thead>
         <tbody>
           <tr><td>Auto-title</td><td>First user message → 3–5 word title</td></tr>
@@ -485,154 +584,120 @@ deleteSession(id)  → drop database + folders + metadata → clear memory → e
           <tr><td>Auto-queue</td><td>Session busy → queue, then drain</td></tr>
         </tbody>
       </table></div>
-      <h2>Queue</h2>
-      <p>If the session is busy, messages go into a <code>ConcurrentLinkedQueue</code> and show <i>Queued (N pending)</i> — they run right after the current task completes.</p>
+      <p>If the session is busy, messages wait in a queue and show <i>Queued (N pending)</i> — they run right after the current task completes.</p>
     </section>
 
+    <!-- ════════════ TROUBLESHOOTING ════════════ -->
     <section id="troubleshooting" class="page">
       <h1>Troubleshooting</h1>
-      <div class="table-wrap glass"><table>
+      <div class="table-wrap"><table>
         <thead><tr><th>Symptom</th><th>Fix</th></tr></thead>
         <tbody>
-          <tr><td>401 errors</td><td>Re-enter API key: Settings &gt; Models, or <code>/connect</code></td></tr>
-          <tr><td>429 rate limit</td><td>Wait — auto backoff 5s/10s/15s; or switch provider</td></tr>
-          <tr><td>Model not responding</td><td>Try another model with <code>/model</code>; free fallback is Pollinations</td></tr>
-          <tr><td>Agent stuck in a loop</td><td>Permission key <code>doom_loop</code> triggers recovery</td></tr>
+          <tr><td>401 errors</td><td>Re-enter the API key: Settings → Models, or <code>/connect</code></td></tr>
+          <tr><td>429 rate limit</td><td>Wait — automatic backoff 5s / 10s / 15s — or switch provider</td></tr>
+          <tr><td>Model not responding</td><td>Try another model with <code>/model</code>; a free fallback is offered automatically</td></tr>
+          <tr><td>Agent stuck in a loop</td><td>The <code>doom_loop</code> permission triggers recovery</td></tr>
           <tr><td>Context too long</td><td>Run <code>/compact</code> — chat history stays</td></tr>
-          <tr><td>UI dump fails</td><td>Enable accessibility service, then retry <code>ui_dump</code></td></tr>
+          <tr><td>UI dump fails</td><td>Enable the accessibility service, then retry <code>ui_dump</code></td></tr>
           <tr><td>Command not found</td><td><code>/help</code> lists commands; custom ones live in <code>~/.config/agent24/commands/</code></td></tr>
-          <tr><td>Session feels slow</td><td>Check the queue; switch to a faster model (e.g. <code>openai-fast</code>)</td></tr>
+          <tr><td>Session feels slow</td><td>Check the queue; switch to a faster model with <code>/model</code></td></tr>
         </tbody>
       </table></div>
-      <h2>Still stuck?</h2>
-      <p>Open a session and ask — the agent can read its own logs via <code>bash</code> and the global database at <code>~/.local/share/agent24/databases/</code>.</p>
-      <div class="footer-cta glass">
-        <p><b>Agent 24</b> — built by <a href="https://github.com/FoysalAhammad" target="_blank" rel="noopener">Foysal Ahammad</a></p>
-        <p class="muted">Source &amp; issues: <a href="https://github.com/FoysalAhammad/agent24" target="_blank" rel="noopener">github.com/FoysalAhammad/agent24</a></p>
+
+      <div class="footer-cta">
+        <p><b>Agent 24</b> is free and open source under the MIT license.</p>
+        <p class="muted">Source code and issue tracking live on GitHub.</p>
         <div class="footer-links">
           <a href="https://github.com/FoysalAhammad/agent24" target="_blank" rel="noopener">Repository</a>
           <a href="https://github.com/FoysalAhammad/agent24/issues" target="_blank" rel="noopener">Issues</a>
           <a href="https://github.com/FoysalAhammad/agent24/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
-          <a href="#support">Support</a>
           <a href="https://foysalahammad.github.io/agent24/">Docs</a>
         </div>
       </div>
-
     </section>
 
+    <!-- ════════════ PRIVACY ════════════ -->
     <section id="privacy" class="page">
       <h1>Privacy Policy</h1>
-      <p class="lead-sm">Last updated 8 October 2025 · Version 1.0 · <a href="mailto:foysalahammad@gmail.com">foysalahammad@gmail.com</a></p>
+      <p class="lead-sm">Effective 10 October 2026 · Version 2.0 · Privacy contact: <a href="https://github.com/FoysalAhammad/agent24/issues" target="_blank" rel="noopener">GitHub Issues</a></p>
 
-      <p><b>Agent24</b> is an open-source Android AI agent. This page explains what data the app handles, why, and what control you have. <b>We do not sell data. We do not run our own servers for your conversations.</b></p>
+      <p>This is the privacy policy of <b>Agent 24</b> ("the app"), an open-source Android application. It explains what user data the app accesses, collects, uses, handles and shares; with whom; and what control you have. The same policy is available inside the app (first-launch consent screen and Drawer → Privacy Policy). <b>We do not sell personal or sensitive user data.</b> Your conversations never pass through servers run by the project.</p>
+
+      <h2>Consent</h2>
+      <p>On first launch the app shows this policy and asks for your consent before anything is collected. You must tap <b>I Agree &amp; Continue</b> to proceed. Android runtime permissions (accessibility, camera and similar) are requested only when a feature you choose actually needs them.</p>
 
       <h2>Data the app handles</h2>
-      <div class="table-wrap glass"><table>
+      <div class="table-wrap"><table>
         <thead><tr><th>Data</th><th>Where it lives</th><th>Why</th><th>Shared with</th></tr></thead>
         <tbody>
-          <tr><td>Chat history</td><td>On-device SQLite (app-private)</td><td>Conversation context, export</td><td>Never, unless you export</td></tr>
-          <tr><td>AI API keys</td><td>Android Keystore + encrypted prefs</td><td>Authenticate to your provider</td><td>Only the provider you configured</td></tr>
-          <tr><td>Your prompts</td><td>Sent to the provider you chose</td><td>To get a model reply</td><td><b>Only</b> that provider</td></tr>
-          <tr><td>Device info</td><td>On-device</td><td>Compatibility + crash diagnosis</td><td>Never</td></tr>
-          <tr><td>Crash logs (optional)</td><td>On-device, opt-in</td><td>Bug fixing</td><td>Optional, opt-in only</td></tr>
-          <tr><td>Analytics (optional)</td><td>On-device, opt-in</td><td>Improving the app</td><td>Optional, opt-in only</td></tr>
+          <tr><td>Chat history</td><td>On-device SQLite, app-private storage</td><td>Conversation context and export</td><td>Never, unless you export it yourself</td></tr>
+          <tr><td>AI API keys</td><td>Android Keystore + AES-256-GCM</td><td>Authenticate with your chosen provider</td><td>Only that provider</td></tr>
+          <tr><td>Your prompts and conversation context</td><td>Sent to the provider you selected</td><td>To obtain a model reply</td><td><b>Only</b> that provider — its privacy policy governs the transfer</td></tr>
+          <tr><td>Files you open or create</td><td>The folders you choose on your device</td><td>Task execution</td><td>Never, unless you export or share them</td></tr>
+          <tr><td>Screenshots, UI dumps, sensor readings (including location where the device allows it)</td><td>Collected only while a session runs and only when you request a task that needs them</td><td>To complete that task; results may be sent to your chosen AI provider as tool output</td><td>That provider only; never linked to device identifiers</td></tr>
+          <tr><td>Device and compatibility information</td><td>On-device</td><td>Crash diagnosis</td><td>Never uploaded unless you opt in</td></tr>
+          <tr><td>Crash logs / usage analytics</td><td>On-device, opt-in, off by default</td><td>Bug fixing</td><td>Only if you choose to send them</td></tr>
         </tbody>
       </table></div>
-      <p><b>No account. No registration. No advertising ID. No data broker.</b></p>
+      <p><b>No account. No registration. No advertising identifier. No data broker.</b></p>
+
+      <h2>Persistent device identifiers</h2>
+      <p>The app does <b>not</b> collect or use IMEI, IMSI, SIM serial numbers, the Android Advertising ID (AAID) or the App Set ID, and does <b>not</b> link any persistent device identifier to personal or sensitive user data or to resettable device identifiers.</p>
 
       <h2>What is sent to AI providers</h2>
-      <p>When you send a message, the app forwards your message text, the conversation context and any tool results the model requested to the <b>provider you selected</b> in Settings &rarr; Models, over <b>TLS 1.3</b>. Each provider's own privacy policy governs that transfer. We do not relay through our own servers.</p>
-      <p>You can delete your API key at any time (Settings &rarr; Models &rarr; Remove), which stops all further calls.</p>
+      <p>When you send a message, the app forwards the message text, conversation context and any tool results the model requested to the <b>provider you selected</b> in Settings → Models, over TLS. Each provider's own privacy policy governs that transfer. The project does not relay conversations through its own servers. Removing your API key (Settings → Models → Remove) stops all further calls.</p>
+
+      <h2>Third-party code and advertising</h2>
+      <p>Components bundled with the app (PDF processing, on-device OCR, the terminal runtime) operate entirely on your device. No embedded SDK sells personal or sensitive user data from this app. When advertisements are shown, they are delivered through the project's own signed remote configuration — no third-party advertising SDK is embedded, no advertising identifier is collected, and no cross-app advertising profile is built.</p>
 
       <h2>Security measures</h2>
-      <div class="table-wrap glass"><table>
+      <div class="table-wrap"><table>
         <thead><tr><th>Layer</th><th>Protection</th></tr></thead>
         <tbody>
-          <tr><td>API keys at rest</td><td>Android Keystore + AES-256-GCM</td></tr>
+          <tr><td>API keys at rest</td><td>Android Keystore + AES-256-GCM (hardware-backed where available)</td></tr>
           <tr><td>Chat database</td><td>App-private storage, readable only by this app</td></tr>
-          <tr><td>Network</td><td>HTTPS / TLS 1.3, certificate pinning</td></tr>
-          <tr><td>APK integrity</td><td>SHA-512 dex fingerprint + certificate pinning + native self-test</td></tr>
-          <tr><td>Install integrity</td><td>Signature verification, repackaging detection</td></tr>
+          <tr><td>Network</td><td>HTTPS / TLS with certificate pinning</td></tr>
+          <tr><td>APK integrity</td><td>Dex fingerprint + certificate pinning + native self-test</td></tr>
+          <tr><td>Remote configuration</td><td>Ed25519-signed payloads, verified before use</td></tr>
           <tr><td>Root / hook detection</td><td>Warns only — never uploads anything</td></tr>
         </tbody>
       </table></div>
 
+      <h2>Retention and deletion</h2>
+      <p>Your data stays on your device for as long as you keep it. The project retains nothing on its own servers, and no account exists — so there is no server-side copy to delete. You can delete everything at any time:</p>
+      <ul>
+        <li><b>In-app:</b> Settings → Delete All Data</li>
+        <li><b>Full removal:</b> uninstall the app — app-private data is removed with it</li>
+        <li><b>Keep a copy:</b> Settings → Export Data (Markdown / JSON) before deleting</li>
+      </ul>
+
       <h2>Your rights</h2>
-      <div class="table-wrap glass"><table>
+      <div class="table-wrap"><table>
         <thead><tr><th>Right</th><th>How</th></tr></thead>
         <tbody>
-          <tr><td>See your data</td><td>Settings &rarr; Export Data (Markdown / JSON)</td></tr>
-          <tr><td>Delete your data</td><td>Settings &rarr; Delete All Data, or simply uninstall</td></tr>
-          <tr><td>Stop analytics</td><td>Settings &rarr; Privacy &rarr; Analytics off (default is off)</td></tr>
-          <tr><td>Remove API keys</td><td>Settings &rarr; Models &rarr; Remove</td></tr>
+          <tr><td>See your data</td><td>Settings → Export Data (Markdown / JSON)</td></tr>
+          <tr><td>Delete your data</td><td>Settings → Delete All Data, or simply uninstall</td></tr>
+          <tr><td>Stop analytics</td><td>Settings → Privacy → Analytics off (default is off)</td></tr>
+          <tr><td>Remove API keys</td><td>Settings → Models → Remove</td></tr>
           <tr><td>Withdraw consent</td><td>Uninstall — no server-side copy exists</td></tr>
         </tbody>
       </table></div>
+      <p>If you are in the European Union, the United Kingdom or Switzerland, you may also exercise the rights granted by applicable data-protection law (including access, rectification, erasure, restriction and objection) through the contact channels below. The app processes personal data only for purposes reasonably expected by you — completing the tasks you request — and does not sell it.</p>
 
       <h2>Children</h2>
-      <p>Agent24 is not directed at children under 13. We do not knowingly collect data from them. Recommended age rating: <b>13+</b>.</p>
+      <p>Agent 24 is not directed at children under 13, and the project does not knowingly collect data from them. Recommended content rating: <b>13+</b>.</p>
 
       <h2>Changes to this policy</h2>
-      <p>Material changes will be posted on this page with an updated date. Continued use after a change means acceptance.</p>
+      <p>Material changes are posted on this page with an updated date and a new version number. The in-app copy asks for your consent again after a version change. Continued use after a change means acceptance.</p>
 
       <h2>Contact</h2>
-      <p><b>Foysal Ahammad</b> — <a href="mailto:foysalahammad@gmail.com">foysalahammad@gmail.com</a><br>
-      <b>Repository:</b> <a href="https://github.com/FoysalAhammad/agent24" target="_blank" rel="noopener">github.com/FoysalAhammad/agent24</a><br>
-      <b>Security reports:</b> <a href="https://github.com/FoysalAhammad/agent24/security/advisories" target="_blank" rel="noopener">GitHub Security Advisories</a></p>
-      <p class="muted"><i>Effective: 8 October 2025 · License: MIT</i></p>
-    </section>
-
-    <section id="support" class="page">
-      <h1>Support the Project</h1>
-      <p class="lead-sm">Agent 24 is free and open source (MIT). If it saves you time, consider supporting its development.</p>
-
-      <div class="support-hero glass">
-        <div class="support-hero-txt">
-          <h2>Sponsor on GitHub</h2>
-          <p class="muted">The official, standard way to support <b>Foysal Ahammad</b> — contributions go directly to maintaining and improving Agent 24: new tools, more providers, better docs.</p>
-          <a class="btn btn-primary" href="https://github.com/sponsors/FoysalAhammad" target="_blank" rel="noopener">
-            <svg class="i i-sm"><use href="#i-heart"/></svg> Become a Sponsor
-          </a>
-        </div>
-        <div class="support-hero-art" aria-hidden="true"><span class="tier"><b>&#9733;</b> Sponsor</span></div>
-      </div>
-
-      <h2>Other ways to help</h2>
-      <div class="support-grid">
-        <a class="support-card glass" href="https://github.com/FoysalAhammad/agent24" target="_blank" rel="noopener">
-          <svg class="i"><use href="#i-github"/></svg>
-          <h3>Star the repository</h3>
-          <p class="muted">A star takes one second and makes the project easier to discover.</p>
-        </a>
-        <a class="support-card glass" href="https://github.com/FoysalAhammad/agent24/issues" target="_blank" rel="noopener">
-          <svg class="i"><use href="#i-activity"/></svg>
-          <h3>Report issues</h3>
-          <p class="muted">Bug reports and feature requests shape the roadmap.</p>
-        </a>
-        <a class="support-card glass" href="https://github.com/FoysalAhammad/agent24/fork" target="_blank" rel="noopener">
-          <svg class="i"><use href="#i-layers"/></svg>
-          <h3>Fork &amp; contribute</h3>
-          <p class="muted">Pull requests are welcome — tools, skills, commands, docs.</p>
-        </a>
-        <a class="support-card glass" href="mailto:foysalahammad@gmail.com">
-          <svg class="i"><use href="#i-help"/></svg>
-          <h3>Contact</h3>
-          <p class="muted">Questions or partnership ideas — email directly.</p>
-        </a>
-      </div>
-
-      <h2>Why sponsor?</h2>
-      <div class="table-wrap glass"><table>
-        <thead><tr><th>Your support funds</th><th>What it means for you</th></tr></thead>
-        <tbody>
-          <tr><td>Maintenance &amp; bug fixes</td><td>A more stable daily driver</td></tr>
-          <tr><td>New tools &amp; providers</td><td>More capability out of the box</td></tr>
-          <tr><td>Docs &amp; examples</td><td>Easier onboarding for your team</td></tr>
-          <tr><td>Long-term upkeep</td><td>The project stays alive and free (MIT)</td></tr>
-        </tbody>
-      </table></div>
-
-      <p class="muted"><i>Sponsoring is voluntary and never unlocks paywalled features — the app stays 100% open source.</i></p>
+      <p>Privacy enquiries, requests and security reports are handled through the project's GitHub:</p>
+      <ul>
+        <li><b>Privacy enquiries:</b> <a href="https://github.com/FoysalAhammad/agent24/issues" target="_blank" rel="noopener">GitHub Issues</a></li>
+        <li><b>Security reports:</b> <a href="https://github.com/FoysalAhammad/agent24/security/advisories" target="_blank" rel="noopener">GitHub Security Advisories</a> (private reporting)</li>
+        <li><b>Repository:</b> <a href="https://github.com/FoysalAhammad/agent24" target="_blank" rel="noopener">github.com/FoysalAhammad/agent24</a></li>
+      </ul>
+      <p class="muted"><i>Effective: 10 October 2026 · Version 2.0 · License: MIT · This policy applies to the Agent 24 app and the documentation site you are reading.</i></p>
     </section>
   </main>
 </div>
