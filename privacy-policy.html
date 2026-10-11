@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Agent 24</title>
+<meta name="description" content="Privacy Policy for Agent 24 — what data the app handles, where it lives, what is shared with AI providers, and how you control it.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Privacy Policy — Agent 24">
+<meta property="og:description" content="What data Agent 24 handles, where it lives, and how you control it.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111418'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='30' font-weight='800' fill='%23F97316' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#F6F7F9; --surface:#fff; --ink:#111418; --muted:#5B6470;
+  --delimiter:#E2E6EB; --accent:#2563EB; --accent-soft:#DBEAFE;
+  --brand:#EA580C; --brand-soft:#FFF1E6;
+  --success:#16A34A; --merlon:#111418;
+  --umbra:4px 4px 0 var(--merlon); --umbra-sm:2px 2px 0 var(--merlon);
+  --r-sm:8px; --r-md:12px; --r-lg:16px;
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{font-family:var(--font);font-size:15px;line-height:1.6;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:2px}
+:focus-visible{outline:3px solid rgba(37,99,235,.4);outline-offset:2px;border-radius:4px}
+code{font-family:var(--mono);font-size:.88em;background:var(--accent-soft);color:#1E3A5F;padding:2px 6px;border-radius:6px;word-break:break-word}
+b,strong{font-weight:700}
+
+/* ── topbar ── */
+.topbar{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,#FCFBF7 0%,#F2EFE6 48%,#E8E3D7 52%,#F6F3EC 100%);border-bottom:2px solid var(--merlon);box-shadow:0 1px 0 rgba(255,255,255,.9) inset}
+.topbar-in{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:0 16px;min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;color:var(--ink);letter-spacing:-.01em;text-decoration:none!important}
+.brand-mark{width:36px;height:36px;border-radius:10px;background:var(--ink);color:#F97316;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;border:1.5px solid var(--merlon);box-shadow:var(--umbra-sm)}
+.brand-sub{font-size:11px;font-weight:700;color:var(--muted);border:1.5px solid var(--delimiter);background:rgba(255,255,255,.75);border-radius:999px;padding:3px 9px;line-height:1.2}
+.topbar .tag{margin-left:auto;font:700 12px var(--mono);color:var(--brand);background:var(--brand-soft);border:1.5px solid var(--brand);border-radius:999px;padding:5px 12px;white-space:nowrap}
+
+/* ── layout ── */
+.wrap{max-width:1080px;margin:0 auto;padding:28px 16px 72px;display:grid;grid-template-columns:230px 1fr;gap:28px;align-items:start}
+
+/* ── toc ── */
+.toc{position:sticky;top:84px;background:var(--surface);border:2px solid var(--merlon);border-radius:var(--r-md);box-shadow:var(--umbra);overflow:hidden}
+.toc h2{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:14px 16px 8px;border-bottom:1.5px solid var(--delimiter);background:linear-gradient(180deg,#F9F7F1,#EFEAE0)}
+.toc ol{list-style:none;padding:8px}
+.toc a{display:block;padding:8px 10px;font-size:13px;font-weight:500;color:var(--ink);border-radius:var(--r-sm);border:1.5px solid transparent;border-left:3px solid transparent;transition:background .12s ease,transform .1s ease}
+.toc a:hover{background:var(--bg);border-color:var(--delimiter);text-decoration:none;transform:translateX(2px)}
+.toc a.active{background:linear-gradient(180deg,#EFF6FF,var(--accent-soft));border-color:var(--merlon);border-left-color:var(--accent);color:#1D4ED8;font-weight:700}
+
+/* ── content ── */
+main{min-width:0}
+.hero{background:var(--surface);border:2px solid var(--merlon);border-radius:var(--r-lg);box-shadow:var(--umbra);padding:30px 28px;margin-bottom:22px}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:linear-gradient(180deg,#FBFAF6,#EDE8DC);border:1.5px solid var(--merlon);border-radius:999px;padding:6px 14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.9),var(--umbra-sm);margin-bottom:14px}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--success);box-shadow:0 0 0 2px rgba(22,163,74,.25),inset 0 -1px 1px rgba(0,0,0,.3)}
+h1{font-size:34px;line-height:1.15;font-weight:800;letter-spacing:-.025em;margin-bottom:10px}
+.lead{font-size:16px;line-height:1.6;color:var(--muted);max-width:64ch}
+h2{font-size:19px;font-weight:750;letter-spacing:-.01em;margin:34px 0 12px;padding-bottom:9px;border-bottom:2px solid var(--merlon)}
+h3{font-size:15.5px;font-weight:700;margin:20px 0 8px}
+p{margin-bottom:11px}
+section{scroll-margin-top:84px}
+ul,ol{margin:0 0 12px 22px}li{margin-bottom:6px}li::marker{color:var(--brand);font-weight:700}
+.note{background:var(--brand-soft);border:1.5px solid var(--brand);border-radius:var(--r-md);padding:14px 16px;margin:14px 0;font-size:14px}
+.note b{color:#9A3412}
+.plate{background:var(--surface);border:2px solid var(--merlon);border-radius:var(--r-md);box-shadow:var(--umbra-sm);padding:18px 20px;margin:14px 0}
+.quiet{color:var(--muted);font-size:13.5px}
+
+/* ── tables ── */
+.tw{overflow-x:auto;background:var(--surface);border:2px solid var(--merlon);border-radius:var(--r-md);box-shadow:var(--umbra-sm);margin:14px 0}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+thead th{background:linear-gradient(180deg,#1C2128,var(--ink));color:#fff;font-weight:700;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;text-align:left;padding:11px 14px;white-space:nowrap}
+tbody td{padding:11px 14px;border-top:1.5px solid var(--delimiter);vertical-align:top;line-height:1.5}
+tbody tr:nth-child(even){background:#FAFBFC}
+tbody tr:hover{background:#F1F5F9}
+
+/* ── buttons / footer ── */
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 4px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 18px;font:700 13.5px var(--font);border:2px solid var(--merlon);border-radius:var(--r-sm);cursor:pointer;transition:transform .1s ease,box-shadow .1s ease}
+.btn-dark{background:linear-gradient(180deg,#262B33,var(--ink));color:#fff;box-shadow:var(--umbra-sm)}
+.btn-dark:hover{background:#000;color:#fff;text-decoration:none;transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--merlon)}
+.btn-lite{background:linear-gradient(180deg,#FFF,#F1EEE6);color:var(--ink);box-shadow:var(--umbra-sm)}
+.btn-lite:hover{text-decoration:none;transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--merlon)}
+.btn:active{transform:translate(2px,2px);box-shadow:none!important}
+footer{margin-top:40px;padding-top:18px;border-top:2px solid var(--merlon);display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;font-size:13px;color:var(--muted)}
+footer a{color:var(--ink);font-weight:600}
+
+#toTop{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:12px;border:2px solid var(--merlon);background:linear-gradient(180deg,#FFF,#F1EEE6);color:var(--ink);font-size:20px;font-weight:800;box-shadow:var(--umbra-sm);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s ease,transform .1s ease;z-index:40}
+#toTop.show{opacity:1;pointer-events:auto}
+#toTop:hover{transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--merlon)}
+
+@media (max-width:900px){
+  .wrap{grid-template-columns:1fr;gap:0;padding:16px 14px 64px}
+  .toc{position:static;margin-bottom:20px}
+  .toc ol{display:flex;flex-wrap:wrap;gap:4px}
+  h1{font-size:27px}
+  .hero{padding:22px 18px}
+  .topbar .tag{display:none}
+}
+@media print{
+  .topbar,.toc,#toTop,.actions{display:none!important}
+  .wrap{display:block;padding:0}
+  .hero,.tw,.plate,.note{box-shadow:none;border-color:#999}
+  body{background:#fff;font-size:12px}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#555;word-break:break-all}
+  section{page-break-inside:avoid}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="./"><span class="brand-mark">A</span> Agent 24 <span class="brand-sub">Privacy</span></a>
+    <span class="tag">v2.0 · 10 Oct 2026</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<nav class="toc" aria-label="Table of contents">
+  <h2>On this page</h2>
+  <ol>
+    <li><a href="#overview">Overview &amp; consent</a></li>
+    <li><a href="#data">Data the app handles</a></li>
+    <li><a href="#identifiers">Persistent identifiers</a></li>
+    <li><a href="#providers">AI providers</a></li>
+    <li><a href="#thirdparty">Third-party &amp; ads</a></li>
+    <li><a href="#security">Security</a></li>
+    <li><a href="#retention">Retention &amp; deletion</a></li>
+    <li><a href="#rights">Your rights</a></li>
+    <li><a href="#children">Children</a></li>
+    <li><a href="#changes">Changes</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</nav>
+
+<main>
+
+  <div class="hero">
+    <div class="badge">Open source · Local-first · No accounts</div>
+    <h1>Privacy Policy</h1>
+    <p class="lead">This policy explains what user data the <b>Agent&nbsp;24</b> Android application accesses, collects, uses, handles and shares, with whom, and what control you have over it. The same policy is shown inside the app before you can use it.</p>
+    <div class="actions">
+      <a class="btn btn-dark" href="https://github.com/FoysalAhammad/agent24" target="_blank" rel="noopener">Repository</a>
+      <a class="btn btn-lite" href="https://foysalahammad.github.io/agent24/" target="_blank" rel="noopener">Full documentation</a>
+      <button class="btn btn-lite" id="printBtn" type="button">Print</button>
+    </div>
+  </div>
+
+  <section id="overview">
+    <h2>1. Overview &amp; consent</h2>
+    <p>Agent 24 ("the app") is a free, open-source Android application distributed under the MIT license. It has <b>no user accounts and no registration</b>. The app does not operate a backend for your conversations: there is no "Agent 24 server" that stores your chats.</p>
+    <p>On first launch the app displays this policy and asks for your consent with an <b>"I Agree &amp; Continue"</b> button before anything is collected. You must take that affirmative action to proceed; navigating away does not count as consent. Android runtime permissions (accessibility, camera, storage and similar) are requested only when a feature you choose actually needs them, never before.</p>
+    <div class="note"><b>In short:</b> your conversations and files stay on your device; only the AI provider <b>you</b> configured receives your prompts, over TLS. We do not sell any data.</div>
+  </section>
+
+  <section id="data">
+    <h2>2. Data the app handles</h2>
+    <p>The table below discloses every category of user and device data the app accesses or handles, its purpose, where it lives, and who it is shared with.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Data category</th><th>Where it lives</th><th>Purpose</th><th>Shared with</th></tr></thead>
+      <tbody>
+        <tr><td><b>Chat history</b></td><td>On-device SQLite database (app-private storage)</td><td>Conversation context and export</td><td>Never — unless you export it yourself</td></tr>
+        <tr><td><b>AI API keys</b></td><td>Android Keystore, encrypted with AES-256-GCM</td><td>Authenticate with your chosen provider</td><td>Only the provider you configured</td></tr>
+        <tr><td><b>Your prompts and conversation context</b></td><td>Sent to the AI provider you selected in Settings → Models</td><td>To generate a model reply</td><td><b>Only that provider</b> — its own privacy policy governs the transfer; transmitted over TLS</td></tr>
+        <tr><td><b>Files you open or create</b></td><td>The folders you choose on your device (for example <code>/sdcard/Agent24/</code>)</td><td>Completing the tasks you request</td><td>Never — unless you export or share them</td></tr>
+        <tr><td><b>Screenshots, UI dumps and sensor readings</b> (including location where the device allows it)</td><td>Collected only while a session is running, and only when you request a task that needs them</td><td>To complete that task; results may be sent to your chosen AI provider as tool output</td><td>That provider only; never linked to device identifiers</td></tr>
+        <tr><td><b>Device and compatibility information</b></td><td>On-device</td><td>Crash diagnosis and compatibility</td><td>Never uploaded unless you opt in</td></tr>
+        <tr><td><b>Crash logs and usage analytics</b></td><td>On-device, opt-in, off by default</td><td>Bug fixing</td><td>Only if you choose to send them</td></tr>
+        <tr><td><b>Remote configuration responses</b> (updates, optional ads)</td><td>Fetched over HTTPS from a signed configuration service</td><td>App updates, optional in-app ads</td><td>No personal data is sent in these requests</td></tr>
+      </tbody>
+    </table></div>
+    <p><b>No account. No registration. No advertising identifier. No data broker. No sale of personal or sensitive data.</b></p>
+  </section>
+
+  <section id="identifiers">
+    <h2>3. Persistent device identifiers</h2>
+    <p>The app does <b>not</b> collect or use the following identifiers, and does <b>not</b> link any persistent device identifier to personal or sensitive user data or to resettable device identifiers:</p>
+    <ul>
+      <li>IMEI, IMSI and SIM serial numbers</li>
+      <li>Android Advertising ID (AAID)</li>
+      <li>App Set ID</li>
+      <li>Serial numbers or any other persistent hardware identifier</li>
+    </ul>
+    <p class="quiet">The app does not build cross-app profiles and does not combine identifier data with location, contacts or any sensitive category.</p>
+  </section>
+
+  <section id="providers">
+    <h2>4. What is sent to AI providers</h2>
+    <p>When you send a message, the app forwards the message text, conversation context and any tool results the model requested to the <b>provider you selected</b> in Settings → Models, over TLS. This happens only for the conversation you started — there is no background syncing of your chats.</p>
+    <ul>
+      <li>The transfer is governed by the <b>selected provider's own privacy policy</b> (for example OpenAI, Anthropic or Google).</li>
+      <li>The project <b>does not relay</b> conversations through servers it operates.</li>
+      <li>Removing your API key (Settings → Models → Remove) stops all further calls immediately.</li>
+      <li>Model replies, reasoning display and streaming are produced by that provider under your key.</li>
+    </ul>
+  </section>
+
+  <section id="thirdparty">
+    <h2>5. Third-party code and advertising</h2>
+    <p><b>Components bundled with the app</b> (PDF processing, on-device OCR, the terminal runtime) operate entirely on your device. No embedded SDK in the app sells personal or sensitive user data from this app.</p>
+    <p><b>Advertising:</b> when advertisements are shown, they are delivered through the project's own remotely <b>signed</b> configuration. There is no third-party advertising SDK embedded in the app, no advertising identifier is collected, no cross-app advertising profile is built, and ad requests contain no personal or sensitive data. You can review advertising behaviour at any time in the app's privacy settings.</p>
+    <p><b>Updates and configuration:</b> the app checks a signed configuration bundle (version metadata and optional ad placement) — these requests contain no personal data and are verifiable by signature.</p>
+  </section>
+
+  <section id="security">
+    <h2>6. Security measures</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Layer</th><th>Protection</th></tr></thead>
+      <tbody>
+        <tr><td>API keys at rest</td><td>Android Keystore + AES-256-GCM (hardware-backed where available)</td></tr>
+        <tr><td>Chat database</td><td>App-private storage, readable only by this app</td></tr>
+        <tr><td>Network</td><td>HTTPS / TLS with certificate pinning</td></tr>
+        <tr><td>APK integrity</td><td>Dex fingerprint + signing-certificate pin + native self-test; modified builds are refused</td></tr>
+        <tr><td>Remote configuration</td><td>Ed25519-signed payloads, verified before use</td></tr>
+        <tr><td>Root / hook detection</td><td>Warns the user only — never uploads anything</td></tr>
+        <tr><td>Build</td><td>Code obfuscation (R8) in release builds</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section id="retention">
+    <h2>7. Retention and deletion</h2>
+    <div class="plate">
+      <p><b>Retention:</b> your data stays on your device for as long as you keep it. The project retains <b>nothing</b> on servers it operates, and no account exists — so there is no server-side copy of your conversations.</p>
+      <p><b>Deletion — you are always in control:</b></p>
+      <ul>
+        <li><b>In-app:</b> Settings → Delete All Data (removes sessions, history and keys)</li>
+        <li><b>Full removal:</b> uninstall the app — app-private data is removed with it</li>
+        <li><b>Keep a copy first:</b> Settings → Export Data (Markdown / JSON)</li>
+        <li><b>API keys only:</b> Settings → Models → Remove</li>
+      </ul>
+      <p class="quiet">Because the app has no accounts, there is no separate account-deletion procedure: deleting the app data (above) deletes all associated data. Nothing is frozen or kept behind.</p>
+    </div>
+  </section>
+
+  <section id="rights">
+    <h2>8. Your rights</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Right</th><th>How to exercise it</th></tr></thead>
+      <tbody>
+        <tr><td>Access your data</td><td>Settings → Export Data (Markdown / JSON)</td></tr>
+        <tr><td>Delete your data</td><td>Settings → Delete All Data, or uninstall the app</td></tr>
+        <tr><td>Stop analytics</td><td>Settings → Privacy → Analytics (off by default)</td></tr>
+        <tr><td>Remove API keys</td><td>Settings → Models → Remove</td></tr>
+        <tr><td>Withdraw consent</td><td>Uninstall — no server-side copy exists</td></tr>
+      </tbody>
+    </table></div>
+    <p>If you are in the European Union, the United Kingdom or Switzerland, you may also exercise the rights granted by applicable data-protection law — including access, rectification, erasure, restriction of processing and objection — through the <a href="#contact">contact channels</a> below. The app processes personal data only for purposes reasonably expected by you (completing the tasks you request) and does not sell it. Legal requests from public authorities are considered case by case against applicable law.</p>
+  </section>
+
+  <section id="children">
+    <h2>9. Children</h2>
+    <p>Agent 24 is <b>not directed at children under 13</b>, and the project does not knowingly collect personal data from them. The app is not a child-directed service and does not include SDKs that are unapproved for child-directed services. Recommended content rating: <b>Teen (13+)</b>.</p>
+  </section>
+
+  <section id="changes">
+    <h2>10. Changes to this policy</h2>
+    <p>Material changes are published on this page with an updated effective date and a new version number. The in-app copy asks for your consent again after a version change. Continued use after a change means acceptance. This page is served as static HTML from a public, non-geo-fenced URL and is not editable by third parties.</p>
+  </section>
+
+  <section id="contact">
+    <h2>11. Contact</h2>
+    <p>Privacy enquiries, data requests and security reports for Agent 24 are handled through the project's public GitHub channels:</p>
+    <ul>
+      <li><b>Privacy enquiries:</b> <a href="https://github.com/FoysalAhammad/agent24/issues" target="_blank" rel="noopener">github.com/FoysalAhammad/agent24/issues</a></li>
+      <li><b>Security reports (private):</b> <a href="https://github.com/FoysalAhammad/agent24/security/advisories" target="_blank" rel="noopener">GitHub Security Advisories</a></li>
+      <li><b>Repository:</b> <a href="https://github.com/FoysalAhammad/agent24" target="_blank" rel="noopener">github.com/FoysalAhammad/agent24</a></li>
+      <li><b>Documentation:</b> <a href="https://foysalahammad.github.io/agent24/" target="_blank" rel="noopener">foysalahammad.github.io/agent24</a></li>
+    </ul>
+    <div class="actions">
+      <a class="btn btn-dark" href="https://github.com/FoysalAhammad/agent24/issues" target="_blank" rel="noopener">Contact via GitHub Issues</a>
+      <a class="btn btn-lite" href="https://github.com/FoysalAhammad/agent24/security/advisories" target="_blank" rel="noopener">Report a security issue</a>
+    </div>
+  </section>
+
+  <footer>
+    <span><b>Privacy Policy — Agent 24</b></span>
+    <span>Version 2.0</span>
+    <span>Effective 10 October 2026</span>
+    <span>MIT License</span>
+    <a href="./">Back to docs</a>
+  </footer>
+
+</main>
+</div>
+
+<button id="toTop" type="button" aria-label="Back to top">↑</button>
+
+<script>
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+  var sections = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); }).filter(Boolean);
+  var toTop = document.getElementById('toTop');
+
+  function setActive() {
+    var y = window.scrollY + 110, current = sections[0];
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i].offsetTop <= y) current = sections[i];
+    }
+    links.forEach(function (a) {
+      a.classList.toggle('active', current && a.getAttribute('href') === '#' + current.id);
+    });
+    toTop.classList.toggle('show', window.scrollY > 500);
+  }
+
+  window.addEventListener('scroll', setActive, { passive: true });
+  setActive();
+
+  toTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  });
+
+  var printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
+})();
+</script>
+
+</body>
+</html>
